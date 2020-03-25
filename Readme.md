@@ -1,7 +1,7 @@
 # Личный проект «Погнали» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Евгений Тарасов](https://up.htmlacademy.ru/adaptive/19/user/489355).
-* Наставник: `Неизвестно`.
+* Наставник: без наставника.
 
 ---
 
