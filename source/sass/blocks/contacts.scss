@@ -1,0 +1,36 @@
+.contacts {
+  display: inline-flex;
+  list-style: none;
+}
+
+.contacts__link {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  font-size: 0;
+  line-height: 22px;
+  font-weight: 700;
+  color: $color_big-stone;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.contacts__link_icon_phone {
+  background-color: $color_neon-carrot;
+  background-image: url("../img/topmenu-phone.svg");
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.contacts__link_icon_mail {
+  background-color: $color_sunglow;
+  background-image: url("../img/topmenu-mail.svg");
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.contacts__link_type_with-title {
+  font-size: $text-size_default;
+}

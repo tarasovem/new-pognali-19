@@ -1,0 +1,305 @@
+.page-main {
+  box-sizing: border-box;
+  background-color: $color_big-stone;
+}
+
+.page-main__wrapper {
+  box-sizing: border-box;
+  background-color: $color_big-stone;
+  background-image:
+    url("../img/traveller-illustration-mobile@1x.png"),
+    url("../img/globe-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position:
+    right 50px bottom,
+    center bottom -90px;
+
+  @include container();
+}
+
+.page-main__slogan {
+  position: relative;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  display: inline-flex;
+  padding: 25px 40px 267px;
+  text-align: center;
+  color: $color_white;
+
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 192px;
+    height: 255px;
+    right: 50px;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    z-index: 0;
+  }
+}
+
+.page-main__title {
+  position: relative;
+  margin: 0;
+  padding-top: 10px;
+  padding-right: 27px;
+  padding-left: 27px;
+  color: $color_white;
+  background-color: $color_big-stone;
+
+  &::after {
+    @include section-border-radius_bottom(20px);
+  }
+}
+
+.page-main__contacts {
+  margin: 0;
+  padding-left: 0;
+}
+
+.page-main__wrapper-user {
+  display: flex;
+  justify-content: center;
+  transform: translateY(50%);
+}
+
+.page-main__review {
+  box-sizing: border-box;
+  padding: 50px 100px 34px 50px;
+
+  @include container();
+}
+
+.page-main__progress {
+  padding-top: 10px;
+}
+
+.page-main__about {
+  padding-top: 70px;
+  padding-bottom: 35px;
+  background-image:
+    url("../img/about-mobile@1x.png"),
+    url("../img/blue_back-mobile@1px.png");
+  background-repeat: no-repeat;
+  background-position:
+    center bottom -40px,
+    right calc(50% + 113px) top 40px;
+
+  &::after {
+    background-image: url("../img/about-mobile@1x.png");
+    background-repeat: no-repeat;
+  }
+}
+
+.page-main__directions {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+}
+
+.page-main_companions {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-main__add-profile {
+  padding-bottom: 6px;
+}
+
+.page-main__title-wrapper {
+  box-sizing: border-box;
+  margin-right: 27px;
+  margin-left: 27px;
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 58px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    z-index: 10;
+    border-radius: 2px;
+    background-color: $color_neon-carrot;
+  }
+
+  @include container();
+}
+
+@media (min-width: $tablet-width) {
+  .page-main {
+    background-color: $color_blue-whale;
+  }
+
+  .page-main__wrapper {
+    padding-right: 40px;
+    padding-left: 40px;
+    background-color: $color_blue-whale;
+    background-image:
+      url("../img/traveller-illustration-tablet@1x.png"),
+      url("../img/globe-back-tablet@1x.jpg");
+    background-position:
+      right 112px bottom 20px,
+      center bottom -118px;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image:
+        url("../img/traveller-illustration-tablet@2x.png"),
+        url("../img/globe-back-tablet@2x.jpg");
+      background-size:
+        372px auto,
+        1479px auto;
+    }
+  }
+
+  .page-main__wrapper-user {
+    position: absolute;
+    top: -112px;
+    right: 40px;
+  }
+
+  .page-main__contacts {
+    visibility: hidden;
+  }
+
+  .page-main__slogan {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 70px;
+    display: inline-flex;
+    padding: 25px 130px 510px;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .page-main__review {
+    position: absolute;
+    top: 435px;
+    left: 50%;
+    padding: 20px;
+    transform: translateX(-330px);
+    max-width: 320px;
+    box-sizing: border-box;
+  }
+
+  .page-main__progress {
+    padding-top: 0;
+  }
+
+  .page-main__about {
+    padding-top: 138px;
+    padding-bottom: 0;
+    background-image:
+      url("../img/about-tablet@1x.png"),
+      url("../img/blue_back-tablet@1px.png");
+    background-position:
+      right calc(50% - 180px) bottom 15px,
+      left 50% top 96px;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image:
+        url("../img/about-tablet@2x.png"),
+        url("../img/blue_back-tablet@1px.png");
+      background-size:
+        376px auto,
+        auto;
+    }
+  }
+
+  .page-main__title-wrapper {
+    display: flex;
+    box-sizing: border-box;
+    padding-right: 74px;
+    padding-left: 74px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main {
+    background-color: $color_big-stone;
+  }
+
+  .page-main__contacts {
+    visibility: visible;
+  }
+
+  .page-main__wrapper-user {
+    display: none;
+  }
+
+  .page-main__wrapper {
+    min-height: 750px;
+    padding-right: 60px;
+    padding-left: 60px;
+    background-color: $color_big-stone;
+    background-image:
+      url("../img/traveller-illustration-desktop@1x.png"),
+      url("../img/globe-back-desktop@1x.jpg");
+    background-position:
+      bottom right 405px,
+      bottom right -170px;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image:
+        url("../img/traveller-illustration-desktop@2x.png"),
+        url("../img/globe-back-desktop@2x.jpg");
+      background-size:
+        431px auto,
+        1800px auto;
+    }
+  }
+
+  .page-main__slogan {
+    width: 400px;
+    padding-top: 204px;
+    padding-bottom: 130px;
+    padding-left: 70px;
+    text-align: left;
+  }
+
+  .page-main__review {
+    top: 212px;
+    right: calc(50% - 1005px);
+    left: auto;
+    padding: 0;
+    width: 285px;
+  }
+
+  .page-main__directions {
+    padding-top: 0;
+  }
+
+  .page-main__title-wrapper {
+    display: flex;
+    padding-right: 124px;
+    padding-left: 124px;
+  }
+
+  .page-main__progress {
+    position: absolute;
+    top: 520px;
+  }
+
+  .page-main__about {
+    background-image:
+      url("../img/about-desktop@1x.png"),
+      url("../img/blue_back-desktop.png");
+    background-position:
+      right calc(50% - 330px) top 100px,
+      left calc(50% - 534px) top 70px;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image:
+        url("../img/about-desktop@2x.png"),
+        url("../img/blue_back-desktop.png");
+      background-size:
+        630px auto,
+        auto;
+    }
+  }
+}

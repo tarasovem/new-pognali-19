@@ -1,0 +1,54 @@
+@mixin font-family_default {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+}
+
+@mixin section-border-radius_bottom ($radius: 30px) {
+  content: "";
+  position: absolute;
+  bottom: -$radius;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: $radius;
+  background-color: inherit;
+  border-bottom-right-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
+@mixin section-border-radius_top ($radius: 30px) {
+  content: "";
+  position: absolute;
+  top: -$radius;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: $radius;
+  background-color: inherit;
+  border-top-right-radius: $radius;
+  border-top-left-radius: $radius;
+}
+
+@mixin container () {
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1440px;
+  }
+}
+
+@mixin visually-hidden () {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}

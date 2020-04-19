@@ -1,0 +1,31 @@
+.level {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: $color_white;
+
+  &_bg_grey {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.level__count {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.level__count_theme_dark {
+  color: $color_cello;
+}
+
+.level__title {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+}

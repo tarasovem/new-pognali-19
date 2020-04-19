@@ -1,0 +1,36 @@
+.social {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  list-style: none;
+}
+
+.social__link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  background-color: $color_mustard;
+  border-radius: 50%;
+  font-size: 0;
+}
+
+.social__icon {
+  fill: $color_cello;
+
+  &_facebook {
+    width: 11px;
+    height: 21px;
+  }
+
+  &_vk {
+    width: 23px;
+    height: 12px;
+  }
+
+  &_instagram {
+    width: 18px;
+    height: 18px;
+  }
+}
