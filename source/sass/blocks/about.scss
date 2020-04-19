@@ -1,0 +1,131 @@
+.about {
+  position: relative;
+  background-color: $color_blue-whale;
+
+  &::after {
+    background-image: inherit;
+    background-repeat: no-repeat;
+    background-position: bottom -10px center;
+
+    @include section-border-radius_bottom;
+  }
+}
+
+.about__link {
+  display: none;
+}
+
+.about__wrapper {
+  box-sizing: border-box;
+  padding-right: 57px;
+  padding-left: 50px;
+
+  @include container();
+}
+
+.about__description {
+  font-size: $text-size_default;
+  line-height: 22px;
+  color: $color_white;
+}
+
+.about__description_weight_light {
+  font-weight: 300;
+}
+
+.about__description_weight_bold {
+  font-weight: 700;
+}
+
+@media (min-width: $tablet-width) {
+  .about::after {
+    background-image: none;
+    height: 60px;
+    bottom: -59px;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+  }
+
+  .about__wrapper {
+    padding-bottom: 30px;
+  }
+
+  .about__section-title {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 45px;
+    margin-bottom: 38px;
+  }
+
+  .about__text {
+    margin-top: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 43px;
+    }
+  }
+
+  .text_weight_light {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 33px;
+    width: 300px;
+  }
+
+  .text_weight_bold {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 25px;
+    width: 260px;
+  }
+
+  .about__link {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 274px;
+    min-height: 80px;
+    margin-top: 52px;
+    margin-bottom: 0;
+    padding: 30px 34px;
+    box-sizing: border-box;
+
+    &::after {
+      margin-left: 80px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about::after {
+    background-image: url("../img/about-desktop@1x.png");
+    background-position: right calc(50% - 330px) bottom;
+  }
+
+  .about__wrapper {
+    padding-right: 60px;
+    padding-bottom: 100px;
+    padding-left: 130px;
+  }
+
+  .about__section-title {
+    margin-bottom: 60px;
+  }
+
+  .text_weight_bold.about__text {
+    font-size: 21px;
+    line-height: 25px;
+    width: 410px;
+  }
+
+  .about__text {
+    width: 620px;
+  }
+
+  .about__link {
+    margin-top: 86px;
+  }
+}

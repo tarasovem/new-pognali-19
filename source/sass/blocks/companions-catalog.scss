@@ -1,0 +1,366 @@
+.companions-catalog {
+  padding-bottom: 46px;
+  background-color: $color_whisper;
+}
+
+.companions-catalog__inner {
+  box-sizing: border-box;
+  padding-right: 25px;
+  padding-left: 25px;
+
+  @include container();
+}
+
+.companions-catalog__list {
+  padding-top: 38px;
+}
+
+.companions-catalog__card {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  padding: 16px 20px 22px;
+  border-radius: 20px;
+
+  .card__avatar {
+    overflow: hidden;
+    width: 70px;
+    height: 70px;
+    margin-right: 16px;
+    border-radius: 50%;
+  }
+
+  .card__like {
+    position: absolute;
+    top: 16px + 70px - 30px;
+    left: 20px + 70px - 30px + 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #edeff6;
+    background-image: url("../img/heart.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 13px 11px;
+  }
+
+  .card__subject {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    min-width: 100px;
+    margin: 0;
+  }
+
+  .card__followers {
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+
+  .card__tags {
+    justify-content: flex-start;
+    width: 170px;
+    margin-top: 12px;
+    margin-left: 8px;
+    padding: 0;
+  }
+
+  .tags__item {
+    margin-right: 4px;
+  }
+
+  .card__subtitle {
+    width: 100%;
+    margin-top: 12px;
+    margin-bottom: 20px;
+    margin-left: 8px;
+  }
+
+  .card__countries {
+    position: static;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 8px;
+  }
+
+  .countries__flag {
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .countries__description {
+    margin-left: 14px;
+  }
+
+  .card__like_status_liked {
+    background-color: #f9eaea;
+    background-image: url("../img/heart-active.svg");
+  }
+
+  .card__transports {
+    flex: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 8px;
+  }
+
+  .card__inner {
+    padding: 0;
+  }
+
+  .card__inner_transport {
+    width: 162px;
+  }
+
+  .card__inner_level {
+    display: flex;
+    align-items: center;
+    flex: auto;
+    flex-direction: column;
+
+    .card__subtitle {
+      box-sizing: border-box;
+      width: auto;
+      margin-bottom: 6px;
+      margin-left: 0;
+      text-align: right;
+    }
+  }
+
+  .card__subject_status::before {
+    top: 7px;
+    right: 0;
+    left: auto;
+    width: 6px;
+    height: 6px;
+    transform: none;
+  }
+
+  .button {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    margin-top: 6px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 20px;
+  }
+
+  .level__title {
+    padding-top: 2px;
+    color: rgba(#444444, 0.4);
+    border-top: 1px solid rgba(#444444, 0.4);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .companions-catalog__inner {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .companions-catalog__card {
+    padding: 0;
+
+    .card__avatar {
+      width: 190px;
+      height: 190px;
+      margin-top: 35px;
+      margin-right: 0;
+      margin-left: 35px;
+      border-radius: 16px;
+    }
+
+    .card__subject {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 30px;
+      align-self: flex-start;
+      flex: initial;
+      flex-direction: row;
+      margin-top: 35px;
+      margin-left: 33px;
+    }
+
+    .card__subject-item {
+      &:first-child {
+        margin-right: 8px;
+      }
+    }
+
+    .card__subject::before {
+      top: 50%;
+      right: -22px;
+      width: 7px;
+      height: 7px;
+    }
+
+    .card__tags {
+      position: absolute;
+      top: 80px;
+      left: 260px;
+      width: 230px;
+      margin: 0;
+    }
+
+    .tags__item {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 24px;
+      margin-right: 6px;
+    }
+
+    .button {
+      position: absolute;
+      top: 174px;
+      left: 255px;
+      width: 148px;
+      height: 50px;
+      margin-top: 0;
+      border-radius: 25px;
+    }
+
+    .card__like {
+      top: 174px;
+      left: 403px;
+      width: 50px;
+      height: 50px;
+      background-size: 20px 17px;
+    }
+
+    .card__followers {
+      font-size: 20px;
+      line-height: 30px;
+      position: absolute;
+      top: 150px;
+      left: 202px;
+      flex: none;
+      min-width: 60px;
+      margin-top: 0;
+    }
+
+    .card__subtitle_hidden {
+      margin: 0;
+    }
+
+    .card__inner {
+      position: static;
+      flex: none;
+    }
+
+    .level {
+      position: absolute;
+      top: 168px;
+      right: 25px;
+    }
+
+    .card__subtitle {
+      margin-top: 18px;
+      margin-bottom: 14px;
+      margin-left: 80px;
+    }
+
+    .card__countries {
+      flex-direction: row;
+      margin-bottom: 10px;
+      margin-left: 35px;
+    }
+
+    .countries__description {
+      font-size: 20px;
+      line-height: 30px;
+      margin-left: 10px;
+    }
+
+    .countries__item:not(:last-child) {
+      margin-right: 32px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companions-catalog__inner {
+    padding-right: 60px;
+    padding-left: 60px;
+    max-width: 950px;
+    margin-left: 0;
+    box-sizing: content-box;
+  }
+
+  .companions-catalog__card {
+    .card__avatar {
+      width: 285px;
+      height: 285px;
+      margin: 0;
+      border-radius: 0;
+    }
+
+    .card__subject {
+      margin-top: 48px;
+      margin-left: 58px;
+    }
+
+    .card__tags {
+      top: 98px;
+      left: 347px;
+    }
+
+    .card__subject::before {
+      right: auto;
+      left: -18px + -7px;
+      transform: translateY(-50%);
+    }
+
+    .button {
+      font-size: 20px;
+      top: 184px;
+      left: 340px;
+    }
+
+    .card__like {
+      top: 184px;
+      left: 488px;
+    }
+
+    .card__followers {
+      top: 150px;
+    }
+
+    .card__subtitle {
+      display: none;
+    }
+
+    .card__countries {
+      position: absolute;
+      top: 44px;
+      left: 674px;
+      flex-direction: column;
+      margin: 0;
+    }
+
+    .card__transports {
+      top: 194px;
+      right: auto;
+      left: 666px;
+      flex-direction: row;
+      margin: 0;
+    }
+
+    .level {
+      right: 44px;
+      top: 182px;
+    }
+
+    .button_type_view-all {
+      font-size: 20px;
+    }
+  }
+}

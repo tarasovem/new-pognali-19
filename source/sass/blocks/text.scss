@@ -1,0 +1,24 @@
+.text {
+  color: $color_white;
+  font-size: $text-size_default;
+  line-height: 22px;
+
+  &_weight_light {
+    font-weight: 300;
+  }
+
+  &_weight_bold {
+    font-weight: 700;
+  }
+
+  &_theme_dark {
+    color: $color_tundora;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .text {
+    font-size: 28px;
+    line-height: 33px;
+  }
+}

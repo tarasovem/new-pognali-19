@@ -1,0 +1,151 @@
+.card {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: $color_white;
+}
+
+.card__subject {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 21px;
+  position: relative;
+  margin: 16px auto 15px;
+  color: $color_cello;
+
+  &_status {
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: -14px;
+      width: 5px;
+      height: 5px;
+      content: "";
+      transform: translateY(-50%);
+      border-radius: 50%;
+    }
+
+    &_offline::before {
+      background-color: $color_foroly;
+    }
+
+    &_online::before {
+      background-color: $color_lima;
+    }
+  }
+}
+
+.card__subject_size_small {
+  font-size: 20px;
+}
+
+.card__followers {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: $color_big-stone;
+}
+
+.card__description {
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 0;
+  opacity: 0.3;
+  color: $color_tundora;
+}
+
+.card__counter {
+  font-weight: 500;
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  margin: 0;
+  text-transform: uppercase;
+  opacity: 0.3;
+  color: $color_tundora;
+
+  &::before {
+    display: inline-flex;
+    width: 11px;
+    height: 11px;
+    margin-right: 6px;
+    content: "";
+    background-image: url("../img/user.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+
+.card__subtitle {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  color: $color_tundora;
+  position: relative;
+  background-color: $color_white;
+  display: inline-block;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #edeff6;
+    width: 100px;
+    height: 1px;
+  }
+
+  &_hidden {
+    @media (min-width: $tablet-width) {
+      @include visually-hidden();
+    }
+  }
+}
+
+.card__preview {
+  display: flex;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card__inner {
+  position: relative;
+  padding-right: 25px;
+  padding-bottom: 23px;
+  padding-left: 25px;
+
+  &::before {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    content: "";
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: $color_white;
+  }
+}
+
+.card__avatar {
+  display: flex;
+  background-color: #cccccc;
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.card__countries {
+  position: relative;
+  top: -12px;
+}
+
+.card__transports {
+  margin-top: 16px;
+  margin-bottom: 20px;
+}
