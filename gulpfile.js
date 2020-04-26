@@ -16,7 +16,6 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
 
-
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
@@ -96,7 +95,6 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-
 gulp.task("build", gulp.series(
   "clean",
   "copy",
@@ -104,4 +102,5 @@ gulp.task("build", gulp.series(
   "sprite",
   "html"
 ));
+
 gulp.task("start", gulp.series("build", "server"));
