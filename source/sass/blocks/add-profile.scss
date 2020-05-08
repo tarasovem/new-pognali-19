@@ -99,6 +99,18 @@
   }
 }
 
+.add-profile__popup {
+  right: 25px;
+  left: 25px;
+  top: 20px;
+  z-index: 100;
+
+  @media (min-width: $tablet-width) {
+    right: 40px;
+    left: 40px;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .add-profile__wrapper {
     padding-top: 162px;
