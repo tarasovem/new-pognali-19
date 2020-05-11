@@ -13,6 +13,11 @@
   background-color: $color_mustard;
   border-radius: 21px;
   cursor: pointer;
+
+  @media (min-width: 768px) {
+    padding: 17px 29px 13px;
+    border-radius: 25px;
+  }
 }
 
 .user-list__link {
@@ -23,4 +28,9 @@
   text-transform: uppercase;
   text-decoration: none;
   box-sizing: border-box;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 1;
+  }
 }

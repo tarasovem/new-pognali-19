@@ -1,6 +1,6 @@
 .page-header {
   box-sizing: border-box;
-  padding: 27px 0;
+  padding: 19px 0;
   background-color: $color_big-stone;
 }
 
@@ -28,9 +28,9 @@
 
 @media (min-width: $tablet-width) {
   .page-header {
-    padding-top: 60px;
+    padding-top: 56px;
     padding-bottom: 60px;
-    background-color: $color_blue-whale;
+    background-color: $color_big-stone;
   }
 
   .page-header__wrapper {
