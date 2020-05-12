@@ -28,4 +28,25 @@
   font-size: 14px;
   line-height: 14px;
   font-weight: 400;
+  text-align: center;
+}
+
+.level__progress {
+  position: relative;
+}
+
+.level__circle {
+  fill: none;
+  stroke-width: 3;
+  stroke: $color_neon-carrot;
+  stroke-dasharray: 302;
+  stroke-dashoffset: calc(302 - (302 * 80) / 100);
+  stroke-linecap: round;
+}
+
+.level__number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
