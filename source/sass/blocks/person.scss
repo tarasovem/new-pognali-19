@@ -98,8 +98,8 @@
     line-height: 18px;
     color: $color_cello;
     text-transform: uppercase;
-    width: 70px;
-    height: 30px;
+    padding: 6px 17px;
+    box-sizing: border-box;
     z-index: 10;
     background-color: $color_whisper;
     display: flex;
@@ -119,4 +119,58 @@
 
 .person__tags .tags__item:last-child {
   margin-right: auto;
+}
+
+.person__transports {
+  position: relative;
+  width: 100%;
+  padding: 14px 10px;
+  margin-top: 25px;
+  border: 1px solid #cbced9;
+  border-radius: 10px;
+
+  &::after {
+    content: 'Транспорт';
+    position: absolute;
+    font-size: 16px;
+    line-height: 18px;
+    color: $color_cello;
+    text-transform: uppercase;
+    padding: 7px 14px 4px;;
+    box-sizing: border-box;
+    z-index: 10;
+    background-color: $color_whisper;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -15px;
+    font-weight: 600;
+  }
+}
+
+.person__transports .transports__icon {
+  width: auto;
+  height: auto;
+}
+
+.person__transports .transports__item {
+  width: 33px;
+  height: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color_white;
+  border-radius: 50%;
+  margin: 0;
+  z-index: 10;
+
+  &:nth-of-type(1) .transports__icon {
+    transform: translateX(-2px);
+  }
+
+  &:nth-of-type(4) .transports__icon {
+    transform: translateX(-1px);
+  }
 }
