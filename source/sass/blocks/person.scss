@@ -6,6 +6,10 @@
   @media (min-width: $tablet-width) {
     padding-top: 124px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 133px;
+  }
 }
 
 .person__wrapper {
@@ -17,6 +21,13 @@
 
   @media (min-width: $tablet-width) {
     max-width: 618px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1192px;
+    position: relative;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
   }
 }
 
@@ -30,18 +41,33 @@
     width: 94px;
     height: 94px;
   }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: -221px;
+    right: 266px;
+    z-index: 10;
+  }
 }
 
 .person__level .level__count {
   font-size: 38px;
   line-height: 46px;
   color: $color_big-stone;
+
+  @media (min-width: $desktop-width) {
+    color: $color_white;
+  }
 }
 
 .person__level .level__title {
   font-size: 18px;
   position: relative;
   color: $color_tundora;
+
+  @media (min-width: $desktop-width) {
+    color: $color_white;
+  }
 
   &::after {
     content: '';
@@ -52,6 +78,7 @@
     top: -8px;
     left: 50%;
     transform: translateX(-50%);
+    opacity: 0.3;
   }
 }
 
@@ -92,6 +119,17 @@
     width: 94px;
     height: 94px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 190px;
+    height: 190px;
+    position: absolute;
+    right: 31px;
+    top: -264px;
+    z-index: 10;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }
 
 .person__avatar img {
@@ -125,6 +163,31 @@
     border-radius: 10px;
     padding: 20px 10px 18px;
   }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    right: 31px;
+    top: -74px;
+    width: 190px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    z-index: 10;
+    box-sizing: border-box;
+    margin-top: 0;
+    padding-top: 14px;
+    padding-bottom: 11px;
+  }
+}
+
+.person__change-photo-hide {
+  @media (min-width: $desktop-width) {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
 .person__tags {
@@ -140,6 +203,15 @@
     margin-top: 51px;
     flex: auto;
     padding: 34px 39px 34px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    order: 1;
+    width: 730px;
+    flex: none;
+    box-sizing: border-box;
+    margin-right: 142px;
   }
 
   &::after {
@@ -166,6 +238,10 @@
       bottom: -18px;
       font-size: 20px;
       letter-spacing: 2px;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 62px;
     }
   }
 }
@@ -201,6 +277,11 @@
     flex: auto;
     margin-top: 0;
     align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 362px;
+    flex: none;
   }
 
   &::after {

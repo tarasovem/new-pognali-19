@@ -76,13 +76,14 @@
           </div>
 
           <div class="person__avatar">
-            <img src="img/demin-tablet@1x.jpg" alt="Аватар пользователя">
-            <!-- Кнопка для настольной версии
-            <a href="#"></a> -->
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+              <img src="img/demin-tablet@1x.jpg" srcset="img/demin-tablet@2x.jpg 2x" alt="Аватар пользователя" width="190" height="190">
+            </picture>
           </div>
 
           <a class="person__change-photo">
-            Сменить фото
+            <span class="person__change-photo-hide">Сменить </span>фото
           </a>
 
           <ul class="tags person__tags">
