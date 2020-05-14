@@ -48,6 +48,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .main-nav {
+    flex: auto;
+  }
+
   .main-nav__toggle {
     display: none;
   }
@@ -61,19 +65,35 @@
     align-items: center;
     flex-direction: row;
     justify-content: flex-end;
+    padding-left: 146px;
+    position: relative;
+    flex: auto;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 40px;
+      display: block;
+      height: 2px;
+      width: 60px;
+      background-color: $color_white;
+    }
   }
 
   .main-nav__contacts {
     display: flex;
     order: 2;
-    margin: 0 0 0 300px;
+    margin: 0 0 0 auto;
     padding-left: 0;
   }
 
   .main-nav__site-list {
     display: block;
     order: 1;
-    margin: 0 auto 0 145px;
+    margin-top: 6px;
+    margin-bottom: 0;
     padding-left: 0;
   }
 

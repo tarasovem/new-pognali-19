@@ -13,6 +13,11 @@
   color: $color_big-stone;
   text-decoration: none;
   border-radius: 50%;
+
+  @media (min-width: $desktop-width) {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .contacts__link_icon_phone {
