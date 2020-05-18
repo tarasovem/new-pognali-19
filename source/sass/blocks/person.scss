@@ -1,7 +1,7 @@
 .person {
   background-color: $color_whisper;
   padding-top: 43px;
-  min-height: 100vh;
+  padding-bottom: 63px;
 
   @media (min-width: $tablet-width) {
     padding-top: 124px;
