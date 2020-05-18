@@ -5,6 +5,7 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 124px;
+    padding-bottom: 90px;
   }
 
   @media (min-width: $desktop-width) {
@@ -282,6 +283,8 @@
   @media (min-width: $desktop-width) {
     width: 362px;
     flex: none;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   &::after {
