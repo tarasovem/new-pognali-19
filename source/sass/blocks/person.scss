@@ -72,7 +72,7 @@
   }
 
   &::after {
-    content: '';
+    content: "";
     width: 50px;
     height: 2px;
     background-color: #cbced9;
@@ -217,7 +217,7 @@
   }
 
   &::after {
-    content: 'Тэги';
+    content: "Тэги";
     position: absolute;
     font-size: 16px;
     line-height: 18px;
@@ -289,13 +289,13 @@
   }
 
   &::after {
-    content: 'Транспорт';
+    content: "Транспорт";
     position: absolute;
     font-size: 16px;
     line-height: 18px;
     color: $color_cello;
     text-transform: uppercase;
-    padding: 7px 14px 4px;;
+    padding: 7px 14px 4px;
     box-sizing: border-box;
     z-index: 10;
     background-color: $color_whisper;

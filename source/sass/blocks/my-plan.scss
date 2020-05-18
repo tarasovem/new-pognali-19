@@ -8,7 +8,7 @@
   }
 
   &::before {
-    content: '';
+    content: "";
     background-color: #dfe3f0;
     right: 0;
     left: 0;
@@ -102,7 +102,7 @@
 
   &::before {
     counter-increment: my-plan;
-    content: counters(my-plan,'.')'.';
+    content: counters(my-plan, ".") ".";
     position: absolute;
     top: 43px;
     left: 24px;
@@ -128,7 +128,7 @@
 
   &::after {
     @media (min-width: $tablet-width) {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       right: 0;
