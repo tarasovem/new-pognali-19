@@ -1,0 +1,130 @@
+.counter {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Blogger Sans", "Arial", sans-serif;
+}
+
+.counter__title {
+  text-transform: uppercase;
+  color: $color_cello;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 1.9px;
+  flex: initial;
+  font-family: inherit;
+}
+
+.counter__units {
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 1.6px;
+  color: #dfe3f0;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  flex: initial;
+  font-family: inherit;
+}
+
+.counter__decrease,
+.counter__increase {
+  font-size: 0;
+  height: 100%;
+  width: 50px;
+  font-family: inherit;
+  flex: initial;
+  position: relative;
+}
+
+.counter__decrease::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  height: 2px;
+  width: 14px;
+  background-color: #dfe3f0;
+}
+
+.counter__increase {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    height: 2px;
+    width: 14px;
+    background-color: #dfe3f0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%) rotate(-90deg);
+    height: 2px;
+    width: 14px;
+    background-color: #dfe3f0;
+  }
+}
+
+.counter__wrapper {
+  flex: auto;
+  border: 1px solid #cbced9;
+  margin-top: 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.counter__number {
+  flex: auto;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  color: $color_cello;
+  text-align: center;
+  width: 100%;
+  font-weight: 500;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.counter__checkbox {
+  flex: auto;
+  margin-top: 23px;
+}
+
+.counter__checkbox-label {
+  font-size: 15px;
+  color: $color_tundora;
+  line-height: 26px;
+  font-family: inherit;
+  padding-left: 40px;
+  display: block;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border: 1px solid #cbced9;
+    border-radius: 4px;
+    box-sizing: border-box;
+    top: -2px;
+    left: 1px;
+  }
+}
+
+.counter__checkbox-input:checked + .counter__checkbox-label {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M12 0L3.8 8 0 4.3v4L3.8 12 12 4z'/%3E%3C/svg%3E");
+  background-position: left 10px top calc(50% - 3px);
+  background-repeat: no-repeat;
+  background-size: 9px 9px;
+  z-index: 10;
+}

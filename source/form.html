@@ -62,7 +62,7 @@
       <div class="page-main__title-wrapper">
         <h1 class="page-main__title"><span class="page-main__title-inner">Направления</span></h1>
       </div>
-      <div class="person">
+      <section class="person">
         <div class="person__wrapper">
 
           <h2 class="visually-hidden">Информация о пользователе</h2>
@@ -125,8 +125,8 @@
             </ul>
 
         </div>
-      </div>
-      <div class="my-plan">
+      </section>
+      <section class="my-plan">
         <div class="my-plan__wrapper">
           <h2 class="my-plan__title">Мои планы:</h2>
           <ol class="my-plan__list">
@@ -144,7 +144,133 @@
             </li>
           </ol>
         </div>
-      </div>
+      </section>
+      <section class="add-plan">
+        <div class="add-plan__wrapper">
+          <h2 class="add-plan__title">Добавить план:</h2>
+          <ol class="add-plan__nav">
+            <li class="add-plan__nav-item">
+              <a class="add-plan__nav-link active" href="#">Даты</a>
+            </li>
+            <li class="add-plan__nav-item">
+              <a class="add-plan__nav-link" href="#">Маршрут</a>
+            </li>
+            <li class="add-plan__nav-item">
+              <a class="add-plan__nav-link" href="#">Развлечения</a>
+            </li>
+          </ol>
+          <form action="https://echo.htmlacademy.ru">
+            <article class="step">
+              <h3 class="step__title">
+                Шаг 1.
+                <span class="step__title-newline">Даты пребывания</span>
+              </h3>
+              <p class="step__descr">
+                Укажите предпочтительное количество попутчиков, которых
+                вы хотели бы позвать в поездку и ее предполагаемую длительность.
+              </p>
+              <div class="counter step__counter">
+                <label class="counter__title" for="step-counter-companion">ищу попутчиков:</label>
+                <p class="counter__units">чел.</p>
+                <div class="counter__wrapper">
+                  <button class="counter__decrease" type="button">Уменьшить количество попутчиков</button>
+                  <input class="counter__number" id="step-counter-companion" type="number" placeholder="0">
+                  <button class="counter__increase" type="button">Увеличить количество попутчиков</button>
+                </div>
+              </div>
+              <div class="counter step__counter">
+                <label class="counter__title" for="step-counter-days">длительность:</label>
+                <p class="counter__units">дн.</p>
+                <div class="counter__wrapper">
+                  <button class="counter__decrease" type="button">Уменьшить количество дней</button>
+                  <input class="counter__number" id="step-counter-days" type="number" placeholder="0">
+                  <button class="counter__increase" type="button">Увеличить количество дней</button>
+                </div>
+                <div class="counter__checkbox">
+                  <input class="counter__checkbox-input visually-hidden" type="checkbox" name="step-counter-with-child" id="step-counter-with-child">
+                  <label class="counter__checkbox-label" for="step-counter-with-child">Можно с детьми</label>
+                </div>
+              </div>
+              <div class="calendar step__calendar">
+                <div class="calendar__title">
+                  <button class="calendar__previous" type="button">Предыдущий месяц</button>
+                  <p class="calendar__title-month">Март 2019</p>
+                  <button class="calendar__next" type="button">Следующий месяц</button>
+                </div>
+                <table>
+                  <thead>
+                  <tr>
+                    <th>П</th>
+                    <th>В</th>
+                    <th>С</th>
+                    <th>Ч</th>
+                    <th>П</th>
+                    <th>С</th>
+                    <th>В</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                  </tr>
+                  <tr>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                  </tr>
+                  <tr>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                  </tr>
+                  <tr>
+                    <td>30</td>
+                    <td>31</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+          </form>
+        </div>
+      </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">

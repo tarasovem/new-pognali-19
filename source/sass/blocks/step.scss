@@ -1,0 +1,35 @@
+.step {
+  background-color: $color_white;
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.step__title {
+  margin-top: 0;
+  color: $color_cello;
+  font-size: 20px;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+
+.step__title-newline {
+  display: block;
+}
+
+.step__descr {
+  color: $color_tundora;
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 0;
+  margin-bottom: 21px;
+}
+
+.step__counter {
+  &:not(:first-of-type) {
+    margin-top: 21px;
+  }
+}
+
+.step__calendar {
+  margin-top: 19px;
+}
