@@ -1,0 +1,134 @@
+.select-country__collapse {
+  @include reset;
+  font-family: inherit;
+  cursor: pointer;
+
+  display: flex;
+  width: 270px;
+  margin: 0 auto;
+
+  background-color: $grayish-blue-light-alt-2;
+  border: none;
+  border-radius: 20px;
+  margin-right: 25px;
+  padding-top: 7px;
+  padding-bottom: 4px;
+
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 29px;
+  color: $blue-700-color;
+  text-transform: uppercase;
+  justify-content: center;
+
+  &::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-image: url("../img/icons/close.svg");
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 25px;
+    margin-right: 13px;
+  }
+}
+
+.select-country__continents-selection {
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-bottom: 0;
+}
+
+.select-country__letters-selection {
+  margin-top: 20px;
+}
+
+.select-country__countries-selection {
+  margin-top: 12px;
+  margin-left: 51px;
+  margin-bottom: 29px;
+}
+
+@media (min-width: $tablet-breakpoint) {
+  .select-country {
+    padding-top: 19px;
+  }
+
+  .select-country__continents-selection {
+    display: none;
+  }
+
+  .select-country__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: -15px;
+  }
+
+  .select-country__letters-selection {
+    margin: 0;
+    margin-top: 17px;
+    margin-left: 67px;
+  }
+
+  .select-country__countries-selection {
+    margin-top: 32px;
+    margin-right: 96px;
+    margin-left: auto;
+    margin-bottom: 37px;
+  }
+
+  .select-country__collapse {
+    width: 100%;
+
+    max-width: 618px;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+    margin: 0 auto;
+    margin-top: 61px;
+    margin-bottom: 58px;
+
+    &::before {
+      width: 20px;
+      height: 20px;
+
+      background-size: 18px 18px;
+      background-position: 1px 6px;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $grayish-blue-light-alt-5;
+    }
+
+    &:active {
+      span {
+        opacity: 0.3;
+      }
+
+      &::before {
+        opacity: 0.3;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .select-country__letters-selection {
+    margin-top: 0;
+  }
+
+  .select-country__collapse {
+    position: relative;
+    z-index: 10;
+    margin-top: -92px;
+    max-width: 100%;
+    width: 1320px;
+  }
+}

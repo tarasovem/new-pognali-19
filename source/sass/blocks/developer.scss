@@ -1,0 +1,47 @@
+.developer {
+  display: flex;
+  width: 100%;
+
+  text-decoration: none;
+  justify-content: space-between;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.developer__logo {
+  margin-top: 16px;
+}
+
+
+.developer__text {
+  @include reset;
+  color: $gray;
+  font-size: 16px;
+  line-height: 22px;
+  padding-top: 20px;
+}
+
+@media (min-width: $tablet-breakpoint) {
+  .developer {
+    width: auto;
+  }
+
+  .developer__text {
+    padding-top: 13px;
+    padding-right: 25px;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .developer__logo {
+    margin-top: 12px;
+  }
+}

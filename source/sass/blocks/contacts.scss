@@ -1,41 +1,131 @@
 .contacts {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
   list-style: none;
+  max-width: 270px;
 }
 
 .contacts__link {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  font-size: 0;
-  line-height: 22px;
-  font-weight: 700;
-  color: $color_big-stone;
   text-decoration: none;
-  border-radius: 50%;
 
-  @media (min-width: $desktop-width) {
-    width: 50px;
-    height: 50px;
+  display: flex;
+  position: relative;
+
+  color: $universal__dark-blue;
+  font-size: 16px;
+  line-height: 46px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  &--cta {
+    color: $universal__bright-yellow;
+  }
+
+  &::before {
+    content: "";
+
+    display: block;
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+
+    background-color: $universal__dark-blue;
+    border-radius: 50%;
+
+    margin-right: 16px;
+  }
+
+  svg {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    color: $universal__bright-yellow;
+  }
+
+  &:hover,
+  &:focus {
+    color: $orangish-yellow-color;
+
+    svg {
+      color: $orangish-yellow-color;
+    }
+  }
+
+  &:active {
+    span {
+      opacity: 0.3;
+    }
+
+    svg {
+      opacity: 0.3;
+    }
   }
 }
 
-.contacts__link_icon_phone {
-  background-color: $color_neon-carrot;
-  background-image: url("../img/topmenu-phone.svg");
-  background-size: 18px 18px;
-  background-repeat: no-repeat;
-  background-position: center center;
+@media (min-width: $tablet-breakpoint) {
+  .contacts {
+    max-width: 100%;
+  }
+
+  .contacts__link {
+    font-size: 28px;
+    line-height: 28px;
+
+    span {
+      padding-top: 22px;
+      padding-left: 7px;
+    }
+
+    &::before {
+      width: 68px;
+      height: 68px;
+
+      background-size: 27px 27px;
+    }
+
+    svg {
+      width: 27px;
+      height: 27px;
+
+      top: 21px;
+      left: 21px;
+    }
+  }
 }
 
-.contacts__link_icon_mail {
-  background-color: $color_sunglow;
-  background-image: url("../img/topmenu-mail.svg");
-  background-size: 18px 18px;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
 
-.contacts__link_type_with-title {
-  font-size: $text-size_default;
+@media (min-width: $desktop-breakpoint) {
+  .contacts__item {
+    &--cta:first-child {
+      margin-left: 30px;
+    }
+
+    &--cta:last-child {
+      margin-left: 110px;
+    }
+  }
+
+  .contacts__link {
+    span {
+      padding-top: 30px;
+      padding-left: 16px;
+    }
+
+    svg {
+      width: 36px;
+      height: 36px;
+      top: 27px;
+      left: 28px;
+    }
+
+    &--cta {
+      &::before {
+        width: 90px;
+        height: 90px;
+
+        background-size: 36px 36px;
+      }
+    }
+  }
 }

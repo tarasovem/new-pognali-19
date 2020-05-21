@@ -1,54 +1,35 @@
-@mixin font-family_default {
-  font-family: "Blogger Sans", "Arial", sans-serif;
-}
-
-@mixin section-border-radius_bottom ($radius: 30px) {
-  content: "";
-  position: absolute;
-  bottom: -$radius;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: $radius;
-  background-color: inherit;
-  border-bottom-right-radius: $radius;
-  border-bottom-left-radius: $radius;
-}
-
-@mixin section-border-radius_top ($radius: 30px) {
-  content: "";
-  position: absolute;
-  top: -$radius;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: $radius;
-  background-color: inherit;
-  border-top-right-radius: $radius;
-  border-top-left-radius: $radius;
-}
-
-@mixin container () {
-  max-width: 320px;
-  margin-left: auto;
-  margin-right: auto;
-
-  @media (min-width: 768px) {
-    max-width: 768px;
-  }
-
-  @media (min-width: 1440px) {
-    max-width: 1440px;
-  }
-}
-
-@mixin visually-hidden () {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+@mixin reset {
   padding: 0;
-  overflow: hidden;
-  border: 0;
-  clip: rect(0 0 0 0);
+  margin: 0;
+}
+
+@mixin tablet-margins {
+  margin-right: 75px;
+  margin-left: 75px;
+}
+
+@mixin tablet-paddings {
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+@mixin desktop-paddings {
+  padding-right: 60px;
+  padding-left: 60px;
+}
+
+@mixin desktop-section-heading {
+  font-size: 45px;
+  line-height: 45px;
+}
+
+@mixin desktop-form-headings {
+  font-size: 36px;
+  line-height: 50px;
+}
+
+@mixin desktop-light-text {
+  font-size: 28px;
+  line-height: 33px;
+  font-weight: 300;
 }

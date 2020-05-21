@@ -1,0 +1,38 @@
+.people {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.people__item {
+  @include reset;
+
+  &:not(:first-child) {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: $tablet-breakpoint) {
+  .people {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .people__item {
+    &:not(:first-child) {
+      margin-top: 0;
+
+      margin-left: 48px;
+    }
+  }
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .people__item {
+    &:not(:first-child) {
+      margin-left: 60px;
+    }
+  }
+}

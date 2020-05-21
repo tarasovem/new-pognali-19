@@ -1,0 +1,296 @@
+.cta-form {
+  position: relative;
+
+  background: $background__dark-blue;
+
+  &::after {
+    content: "";
+
+    display: block;
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    bottom: -27px;
+    left: 0;
+    z-index: 2;
+
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+    background-color: $background__dark-blue;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+.cta-form__heading {
+  @include reset;
+  color: $background__orange-color;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  padding-top: 53px;
+
+  max-width: 320px;
+}
+
+.cta-form__text {
+  @include reset;
+  color: $white;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 300;
+  text-align: center;
+
+  padding-top: 19px;
+  padding-right: 18px;
+  padding-left: 18px;
+
+  &--questions {
+    padding-top: 29px;
+  }
+}
+
+.cta-form__link {
+  color: $universal__bright-yellow;
+
+  &:hover,
+  &:focus {
+    color: $background__orange-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.cta-form__email-form {
+  display: flex;
+  max-width: 270px;
+  height: 62px;
+
+  background-color: $white;
+  border-radius: 10px;
+
+  margin-top: 31px;
+}
+
+.cta-form__input {
+  border: none;
+  background: none;
+  outline: none;
+
+  max-width: 210px;
+  padding-left: 20px;
+
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+  &::placeholder {
+    color: $rgba__text__light-gray;
+  }
+
+  &:hover {
+    background-color: $main-color;
+  }
+
+  &:focus {
+    background-color: $background__dark-blue;
+    color: $white;
+    border: 4px solid $white;
+  }
+}
+
+.cta-form__button {
+  border: none;
+
+  flex-shrink: 0;
+
+  width: 60px;
+  height: 100%;
+
+  background: rgba($universal__bright-yellow, 1) url("../img/icons/mobile/triangle-arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: 27px 24px;
+  background-size: 10px 14px;
+  border-radius: 10px;
+
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.cta-form__button-description {
+  display: none;
+}
+
+.cta-form__contacts {
+  @include reset;
+  margin-top: 17px;
+  padding-right: 33px;
+}
+
+@media (min-width: $tablet-breakpoint) {
+  .cta-form {
+    &::after {
+      height: 60px;
+      bottom: -60px;
+
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+    }
+
+    .wrapper {
+      padding-top: 84px;
+      padding-right: 75px;
+      padding-left: 75px;
+    }
+  }
+
+  .cta-form__heading {
+    max-width: 100%;
+
+    font-size: 45px;
+    line-height: 45px;
+
+    padding-left: 2px;
+  }
+
+  .cta-form__text {
+    font-size: 28px;
+    line-height: 33px;
+
+    padding-top: 58px;
+    padding-right: 0;
+    padding-left: 0;
+
+    &--questions {
+      padding-top: 56px;
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  .cta-form__mobile-br {
+    display: none;
+  }
+
+  .cta-form__email-form {
+    max-width: 100%;
+    width: 100%;
+    height: 81px;
+
+    margin-top: 66px;
+
+    border-radius: 20px;
+  }
+
+  .cta-form__button {
+    width: 82px;
+
+    border-radius: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    background-position: 36px 34px;
+  }
+
+  .cta-form__input {
+    max-width: 100%;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    padding-left: 33px;
+  }
+
+  .cta-form__button-description {
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: -1;
+  }
+
+  .cta-form__contacts {
+    max-width: 100%;
+    width: 100%;
+    padding-top: 24px;
+  }
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .cta-form {
+    padding-bottom: 43px;
+  }
+
+  .cta-form__heading {
+    @include desktop-section-heading;
+    padding-top: 83px;
+  }
+
+  .cta-form__text {
+    @include desktop-light-text;
+
+    &--questions {
+      font-size: 29px;
+
+      padding-top: 66px;
+    }
+  }
+
+  .cta-form__email-form {
+    max-width: 1174px;
+
+    margin-top: 61px;
+    margin-right: 131px;
+    margin-left: 128px;
+  }
+
+  .cta-form__input {
+    max-width: block;
+    flex-grow: 1;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+
+  .cta-form__button {
+    font-family: inherit;
+    width: 324px;
+    background-position: 279px 34px;
+    text-align: left;
+  }
+
+  .cta-form__button-description {
+    display: inline;
+    font-family: inherit;
+    position: relative;
+    z-index: 1;
+
+    color: $text__dark-blue;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 700;
+
+    padding-left: 32px;
+  }
+
+  .cta-form__contacts {
+    flex-direction: row;
+    justify-content: center;
+    max-width: 100%;
+    padding-top: 28px;
+  }
+}

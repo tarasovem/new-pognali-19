@@ -1,0 +1,29 @@
+.countries-selection {
+  @include reset;
+  list-style: none;
+  margin-bottom: 37px;
+}
+
+.countries-selection__item {
+  a {
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 22px;
+    color: $gray;
+  }
+}
+
+@media (min-width: $tablet-breakpoint) {
+  .countries-selection__item {
+    a {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .countries-selection {
+    display: none;
+  }
+}

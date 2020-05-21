@@ -1,0 +1,261 @@
+.plans {
+  background-color: $blue-80-color;
+
+  .plans__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+  }
+}
+
+.plans__heading {
+  @include reset;
+  width: 270px;
+  z-index: 4;
+
+  padding-top: 24px;
+}
+
+.plans__list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  counter-reset: blocks;
+
+  margin-top: 21px;
+}
+
+.plans__item {
+  width: 270px;
+  border-radius: 10px;
+  background-color: $white;
+  margin-top: 10px;
+  counter-increment: blocks;
+  padding-bottom: 22px;
+
+  &:first-child {
+    margin-top: 8px;
+  }
+}
+
+.plans__place {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  margin: 0;
+  padding-top: 24px;
+
+  &::before {
+    content: counter(blocks) ".";
+    padding-left: 23px;
+    padding-right: 6px;
+    font-weight: 500;
+  }
+}
+
+.plans__mates {
+  margin: 0;
+  display: flex;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding-left: 25px;
+  padding-top: 20px;
+  letter-spacing: 1.5px;
+
+  &--number {
+    padding-right: 5px;
+  }
+}
+
+.plans__dates {
+  margin: 0;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding-left: 25px;
+  padding-top: 5px;
+  letter-spacing: 1.5px;
+}
+
+.plans__link {
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-left: 26px;
+  padding-top: 21px;
+  color: rgba($black, 0.3);
+
+  &:hover {
+    color: rgba($black, 0.6);
+  }
+
+  &:active {
+    color: rgba($black, 0.1);
+  }
+}
+
+@media (min-width: $tablet-breakpoint) {
+  .plans {
+    .plans__wrapper {
+      @include tablet-paddings;
+      align-items: initial;
+
+      padding-bottom: 77px;
+
+      margin-top: 27px;
+    }
+  }
+
+  .plans__heading {
+    font-size: 36px;
+    line-height: 50px;
+    padding-top: 47px;
+    padding-left: 35px;
+  }
+
+  .plans__list {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plans__item {
+    width: 618px;
+    padding-bottom: 17px;
+  }
+
+  .plans__place {
+    position: relative;
+    font-size: 24px;
+    line-height: 50px;
+
+    padding-top: 25px;
+    padding-left: 35px;
+    padding-bottom: 22px;
+
+
+    &::before {
+      position: absolute;
+      top: 42px;
+      right: 26px;
+
+      font-size: 20px;
+      line-height: 18px;
+    }
+  }
+
+  .plans__mates {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+
+    padding-left: 32px;
+  }
+
+  .plans__dates {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2.2px;
+
+    padding-top: 19px;
+    margin-right: 56px;
+    margin-left: auto;
+  }
+
+  .plans__link {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2.2px;
+
+    padding-top: 19px;
+
+    margin-right: 34px;
+  }
+
+  .plans__additional-info {
+    display: flex;
+  }
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .plans {
+    .plans__wrapper {
+      padding-bottom: 63px;
+      margin-top: 33px;
+    }
+  }
+
+  .plans__heading {
+    @include desktop-form-headings;
+    padding-top: 44px;
+    padding-left: 91px;
+    width: auto;
+  }
+
+  .plans__list {
+    padding-left: 84px;
+    padding-right: 20px;
+    margin-top: 37px;
+  }
+
+  .plans__additional-info {
+    width: 662px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .plans__item {
+    display: flex;
+    width: 1256px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 4px;
+    margin-top: 14px;
+
+    &:first-child {
+      margin-top: 7px;
+    }
+  }
+
+  .plans__place {
+    font-size: 24px;
+    line-height: 50px;
+
+    padding-top: 22px;
+    padding-left: 95px;
+
+    &::before {
+      right: auto;
+      top: 41px;
+      left: 19px;
+    }
+  }
+
+  .plans__mates,
+  .plans__dates,
+  .plans__link {
+    font-size: 20px;
+    line-height: 18px;
+    padding-top: 38px;
+  }
+
+  .plans__mates {
+    margin-right: 11px;
+  }
+
+  .plans__dates {
+    margin-right: 100px;
+  }
+
+  .plans__link {
+    margin-right: 40px;
+  }
+}

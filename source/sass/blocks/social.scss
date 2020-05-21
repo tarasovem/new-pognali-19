@@ -1,36 +1,170 @@
 .social {
+  list-style: none;
+
   display: flex;
   justify-content: center;
-  padding-left: 0;
-  list-style: none;
+}
+
+.social__item {
+  width: 45px;
+  height: 45px;
+  position: relative;
 }
 
 .social__link {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 45px;
-  height: 45px;
-  background-color: $color_mustard;
-  border-radius: 50%;
-  font-size: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: $text__dark-blue;
+
+  background-repeat: no-repeat;
+  background-position: center;
+
+  svg {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &--facebook {
+    svg {
+      width: 11px;
+      height: 21px;
+
+      top: 13px;
+      left: 17px;
+    }
+  }
+
+  &--vk {
+    svg {
+      width: 23px;
+      height: 12px;
+
+      top: 18px;
+      left: 11px;
+    }
+  }
+
+  &--instagram {
+    svg {
+      width: 18px;
+      height: 18px;
+
+      top: 14px;
+      left: 14px;
+    }
+  }
+
+  &--facebook-ftr {
+    svg {
+      width: 11px;
+      height: 21px;
+
+      top: 13px;
+      left: 17px;
+    }
+  }
+
+  &--vk-ftr {
+    svg {
+      width: 23px;
+      height: 12px;
+
+      top: 18px;
+      left: 11px;
+    }
+  }
+
+  &--instagram-ftr {
+    svg {
+      width: 18px;
+      height: 18px;
+
+      top: 14px;
+      left: 14px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    svg {
+      opacity: 0.3;
+    }
+  }
+
+  &--ftr {
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+
+    background-color: $universal__bright-yellow;
+
+    &:hover,
+    &:focus {
+      background-color: $orangish-yellow-color;
+
+      svg {
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      svg {
+        opacity: 0.3;
+      }
+    }
+  }
 }
 
-.social__icon {
-  fill: $color_cello;
-
-  &_facebook {
-    width: 11px;
-    height: 21px;
+@media (min-width: $tablet-breakpoint) {
+  .social__item {
+    width: 60px;
+    height: 60px;
   }
 
-  &_vk {
-    width: 23px;
-    height: 12px;
-  }
+  .social__link {
+    &--facebook-ftr {
+      svg {
+        width: 14px;
+        height: 28px;
 
-  &_instagram {
-    width: 18px;
-    height: 18px;
+        top: 16px;
+        left: 23px;
+      }
+    }
+
+    &--vk-ftr {
+      svg {
+        width: 31px;
+        height: 16px;
+
+        top: 23px;
+        left: 14px;
+      }
+    }
+
+    &--instagram-ftr {
+      svg {
+        width: 24px;
+        height: 24px;
+
+        top: 18px;
+        left: 18px;
+      }
+    }
   }
 }

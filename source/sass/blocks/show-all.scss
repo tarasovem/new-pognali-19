@@ -1,0 +1,72 @@
+.show-all {
+  transition: background-color 0.3s, color 0.3s, opacity 0.3s;
+  text-decoration: none;
+
+  display: flex;
+  max-width: 270px;
+  position: relative;
+
+  background-color: $universal__bright-yellow;
+
+  color: $rgba__bright-blue;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+
+  padding-top: 23px;
+  padding-right: 132px;
+  padding-bottom: 21px;
+  padding-left: 24px;
+
+  border-radius: 10px;
+
+  &:hover {
+    transition: background-color 0.3s;
+    background-color: $orangish-yellow-color;
+  }
+
+  &:focus {
+    transition: background-color 0.3s;
+    background-color: $orangish-yellow-color;
+  }
+
+  &:active {
+    transition: color 0.3s, opacity 0.3s;
+    color: $rgba__light-bright-blue;
+
+    svg {
+      opacity: 0.3;
+    }
+  }
+
+  svg {
+    display: block;
+    width: 10px;
+    height: 14px;
+    position: absolute;
+    top: 24px;
+    right: 23px;
+  }
+}
+
+@media (min-width: $tablet-breakpoint) {
+  .show-all {
+    max-width: 100%;
+    flex-grow: 1;
+
+    margin-right: 35px;
+    margin-left: 35px;
+
+    svg {
+      top: 34px;
+      right: 36px;
+    }
+  }
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .show-all {
+    max-width: 274px;
+    padding-right: 0;
+  }
+}

@@ -1,0 +1,164 @@
+.mate-card {
+  position: relative;
+  max-width: 270px;
+
+  border-radius: 20px;
+
+  &:hover {
+    box-shadow: 0 6px 21px 0 rgba(0, 0, 0, 0.08);
+  }
+}
+
+.mate-card__img {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  display: block;
+}
+
+.mate-card__level {
+  position: absolute;
+  top: 16px;
+  left: 17px;
+}
+
+.mate-card__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  background: $white;
+
+  padding-bottom: 23px;
+
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+  ul {
+    list-style: none;
+  }
+}
+
+.mate-card__name-wrapper {
+  padding-top: 25px;
+}
+
+.mate-card__name {
+  @include reset;
+}
+
+.mate-card__name-link {
+  text-decoration: none;
+
+  position: relative;
+
+  color: $text__dark-blue;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 700;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+
+    .mate-card__name {
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    .mate-card__name {
+      opacity: 0.3;
+    }
+  }
+
+  &::before {
+    content: "";
+
+    display: block;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    left: -16px;
+    bottom: -12px;
+
+    background-color: $background__pinkish;
+    border-radius: 50%;
+  }
+
+  &--online {
+    &::before {
+      background-color: $background__greenish;
+    }
+  }
+}
+
+.mate-card__to-visit {
+  @include reset;
+  position: absolute;
+  top: -12px;
+  left: 0;
+}
+
+.mate-card__hashtags {
+  @include reset;
+  margin-top: 15px;
+}
+
+.mate-card__transport {
+  @include reset;
+  margin-top: 16px;
+}
+
+@media (min-width: $tablet-breakpoint) {
+  .mate-card {
+    max-width: 285px;
+  }
+
+  .mate-card__info {
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    padding-bottom: 29px;
+  }
+
+  .mate-card__name {
+    font-size: 24px;
+    line-height: 24px;
+
+    padding-top: 5px;
+  }
+
+  .mate-card__name-link {
+    &::before {
+      width: 7px;
+      height: 7px;
+
+      left: -22px;
+      bottom: -21px;
+    }
+  }
+
+  .mate-card__hashtags {
+    margin-top: 20px;
+  }
+
+  .mate-card__transport {
+    margin-top: 26px;
+  }
+
+  .mate-card__level {
+    top: 23px;
+    left: 23px;
+  }
+
+  .mate-card__img {
+    width: 285px;
+    height: 285px;
+
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+  }
+}
