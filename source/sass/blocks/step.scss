@@ -2,6 +2,17 @@
   background-color: $color_white;
   border-radius: 10px;
   padding: 24px 24px 22px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    border-radius: 30px;
+    padding: 48px 43px 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    border-radius: 60px;
+    padding: 99px 160px 105px;
+  }
 }
 
 .step__title {
@@ -10,10 +21,20 @@
   font-size: 20px;
   line-height: 1;
   margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    margin-bottom: 34px;
+  }
 }
 
 .step__title-newline {
   display: block;
+
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+    transform: translateX(-2px);
+  }
 }
 
 .step__descr {
@@ -22,16 +43,54 @@
   line-height: 22px;
   margin-top: 0;
   margin-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+    padding-right: 20px;
+    margin-bottom: 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
+    width: 580px;
+    margin-bottom: 54px;
+  }
 }
 
 .step__counter {
-  &:not(:first-of-type) {
+
+  @media (min-width: $desktop-width) {
+    &:nth-of-type(2) {
+      border-top: none;
+    }
+  }
+
+  &_with-checkbox {
     margin-top: 21px;
+
+    @media (min-width: $tablet-width) {
+      position: relative;
+      margin-top: 87px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 0;
+      padding-top: 15px;
+    }
   }
 }
 
 .step__calendar {
   margin-top: 19px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 31px;
+  }
 }
 
 .step__next-button {
@@ -48,4 +107,115 @@
   margin-left: -4px;
   margin-right: -4px;
   border-radius: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 45px;
+    margin-left: 0;
+    margin-right: 0;
+    display: inline-block;
+    text-transform: none;
+    font-size: 24px;
+    padding: 29px 77px 26px 34px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 10px;
+      height: 14px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='14' viewBox='0 0 10 14'%3E%3Cpath fill='%231d2e5b' d='M0 14V.1l10 7z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      right: 36px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 56px;
+  }
+}
+
+.step__nav {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: -44px;
+  right: 18px;
+  width: 48px;
+
+  @media (min-width: $tablet-width) {
+    top: -80px;
+    right: 0;
+    width: 74px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    width: auto;
+    align-items: flex-start;
+    top: 107px;
+    right: auto;
+    left: 932px;
+  }
+}
+
+.step__nav-item:not(:last-of-type)  {
+  @media (min-width: $desktop-width) {
+    margin-bottom: 22px;
+  }
+}
+
+.step__nav-link {
+  font-size: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: block;
+  background-color: rgba(128, 130, 133, 0.3);
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    letter-spacing: 2px;
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.3);
+    height: auto;
+    width: auto;
+    border-radius: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-left: 42px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background-color: rgba(128, 130, 133, 0.3);
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+    }
+  }
+
+  &.active {
+    background-color: #1d2e5b;
+
+    @media (min-width: $desktop-width) {
+      color: #000000;
+      background-color: transparent;
+
+      &::before {
+        background-color: #1d2e5b;
+      }
+    }
+  }
 }

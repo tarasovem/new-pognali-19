@@ -148,37 +148,36 @@
       <section class="add-plan">
         <div class="add-plan__wrapper">
           <h2 class="add-plan__title">Добавить план:</h2>
-          <ol class="add-plan__nav">
-            <li class="add-plan__nav-item">
-              <a class="add-plan__nav-link active" href="#">Даты</a>
-            </li>
-            <li class="add-plan__nav-item">
-              <a class="add-plan__nav-link" href="#">Маршрут</a>
-            </li>
-            <li class="add-plan__nav-item">
-              <a class="add-plan__nav-link" href="#">Развлечения</a>
-            </li>
-          </ol>
           <form action="https://echo.htmlacademy.ru">
-            <article class="step">
+            <article class="step" id="step-1">
+              <ol class="step__nav">
+                <li class="step__nav-item">
+                  <a class="step__nav-link active" href="#step-1">Даты</a>
+                </li>
+                <li class="step__nav-item">
+                  <a class="step__nav-link" href="#">Маршрут</a>
+                </li>
+                <li class="step__nav-item">
+                  <a class="step__nav-link" href="#">Развлечения</a>
+                </li>
+              </ol>
               <h3 class="step__title">
                 Шаг 1.
                 <span class="step__title-newline">Даты пребывания</span>
               </h3>
               <p class="step__descr">
-                Укажите предпочтительное количество попутчиков, которых
-                вы хотели бы позвать в поездку и ее предполагаемую длительность.
+                Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.
               </p>
               <div class="counter step__counter">
                 <label class="counter__title" for="step-counter-companion">ищу попутчиков:</label>
                 <p class="counter__units">чел.</p>
                 <div class="counter__wrapper">
                   <button class="counter__decrease" type="button">Уменьшить количество попутчиков</button>
-                  <input class="counter__number" id="step-counter-companion" type="number" placeholder="0">
+                  <input class="counter__number" id="step-counter-companion" type="number" placeholder="2">
                   <button class="counter__increase" type="button">Увеличить количество попутчиков</button>
                 </div>
               </div>
-              <div class="counter step__counter">
+              <div class="counter step__counter step__counter_with-checkbox">
                 <label class="counter__title" for="step-counter-days">длительность:</label>
                 <p class="counter__units">дн.</p>
                 <div class="counter__wrapper">
@@ -200,13 +199,13 @@
                 <table class="calendar__main">
                   <thead class="calendar__main-header">
                   <tr>
-                    <th class="calendar__week">П</th>
-                    <th class="calendar__week">В</th>
-                    <th class="calendar__week">С</th>
-                    <th class="calendar__week">Ч</th>
-                    <th class="calendar__week">П</th>
-                    <th class="calendar__week calendar__week_weekend">С</th>
-                    <th class="calendar__week calendar__week_weekend">В</th>
+                    <th class="calendar__week">Пн</th>
+                    <th class="calendar__week">Вт</th>
+                    <th class="calendar__week">Ср</th>
+                    <th class="calendar__week">Чт</th>
+                    <th class="calendar__week">Пт</th>
+                    <th class="calendar__week calendar__week_weekend">Сб</th>
+                    <th class="calendar__week calendar__week_weekend">Вс</th>
                   </tr>
                   </thead>
                   <tbody>
@@ -217,7 +216,7 @@
                     <td class="calendar__day">26</td>
                     <td class="calendar__day">27</td>
                     <td class="calendar__day">28</td>
-                    <td class="calendar__day">1</td>
+                    <td class="calendar__day">1 <span class="calendar__day_first">мар</span></td>
                   </tr>
                   <tr>
                     <td class="calendar__day">2</td>
@@ -250,15 +249,15 @@
                     <td class="calendar__day">23</td>
                     <td class="calendar__day">24</td>
                     <td class="calendar__day">25</td>
-                    <td class="calendar__day calendar__day_focus calendar__day_selected">26</td>
+                    <td class="calendar__day calendar__day_focus calendar__day_selected">26 <span class="calendar__day_check">Заезд</span></td>
                     <td class="calendar__day calendar__day_selected">27</td>
-                    <td class="calendar__day calendar__day_selected">28</td>
+                    <td class="calendar__day calendar__day_selected">28 <span class="calendar__day_check">Выезд</span></td>
                     <td class="calendar__day calendar__day_future">29</td>
                   </tr>
                   <tr>
                     <td class="calendar__day calendar__day_future">30</td>
                     <td class="calendar__day calendar__day_future">31</td>
-                    <td class="calendar__day calendar__day_future">1</td>
+                    <td class="calendar__day calendar__day_future">1 <span class="calendar__day_first">апр</span></td>
                     <td class="calendar__day calendar__day_future">2</td>
                     <td class="calendar__day calendar__day_future">3</td>
                     <td class="calendar__day calendar__day_future">4</td>

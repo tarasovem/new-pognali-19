@@ -2,6 +2,16 @@
   display: flex;
   flex-wrap: wrap;
   font-family: "Blogger Sans", "Arial", sans-serif;
+
+  @media (min-width: $tablet-width) {
+    border-top: 1px solid #d6d9e6;
+    padding-top: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 30px;
+    align-items: center;
+  }
 }
 
 .counter__title {
@@ -12,6 +22,17 @@
   letter-spacing: 1.9px;
   flex: initial;
   font-family: inherit;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    letter-spacing: 2.3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 1;
+    width: 200px;
+    margin-right: 20px;
+  }
 }
 
 .counter__units {
@@ -25,16 +46,35 @@
   margin-left: auto;
   flex: initial;
   font-family: inherit;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+    order: 3;
+  }
 }
 
 .counter__decrease,
 .counter__increase {
   font-size: 0;
-  height: 100%;
+  height: auto;
   width: 50px;
   font-family: inherit;
   flex: initial;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    border: none;
+    background-color: transparent;
+    width: 155px;
+  }
 }
 
 .counter__decrease::before {
@@ -46,6 +86,15 @@
   height: 2px;
   width: 14px;
   background-color: #dfe3f0;
+
+  @media (min-width: $tablet-width) {
+    width: 20px;
+    left: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 19px;
+  }
 }
 
 .counter__increase {
@@ -53,22 +102,38 @@
     content: "";
     position: absolute;
     top: 50%;
-    right: 10px;
+    right: 18px;
     transform: translateY(-50%);
     height: 2px;
     width: 14px;
     background-color: #dfe3f0;
+
+    @media (min-width: $tablet-width) {
+      width: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 19px;
+    }
   }
 
   &::after {
     content: "";
     position: absolute;
     top: 50%;
-    right: 10px;
+    right: 18px;
     transform: translateY(-50%) rotate(-90deg);
     height: 2px;
     width: 14px;
     background-color: #dfe3f0;
+
+    @media (min-width: $tablet-width) {
+      width: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 19px;
+    }
   }
 }
 
@@ -78,8 +143,20 @@
   margin-top: 8px;
   border-radius: 4px;
   display: flex;
-  align-items: center;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    margin-top: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 179px;
+    flex: initial;
+    margin-right: auto;
+    order: 2;
+    margin-top: 0;
+  }
 }
 
 .counter__number {
@@ -92,11 +169,42 @@
   font-weight: 500;
   padding-top: 10px;
   padding-bottom: 10px;
+  font-family: inherit;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    padding-top: 19px;
+    padding-bottom: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    border: none;
+    padding-top: 24px;
+    padding-bottom: 22px;
+    -moz-appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
 }
 
 .counter__checkbox {
   flex: auto;
   margin-top: 23px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: -61px;
+    margin-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .counter__checkbox-label {
@@ -106,7 +214,15 @@
   font-family: inherit;
   padding-left: 40px;
   display: block;
-  position: relative;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 36px;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    padding-left: 60px;
+  }
+
 
   &::before {
     content: "";
@@ -118,6 +234,11 @@
     box-sizing: border-box;
     top: -2px;
     left: 1px;
+
+    @media (min-width: $tablet-width) {
+      width: 36px;
+      height: 36px;
+    }
   }
 }
 
@@ -127,4 +248,9 @@
   background-repeat: no-repeat;
   background-size: 9px 9px;
   z-index: 10;
+
+  @media (min-width: $tablet-width) {
+    background-size: 12px 12px;
+    background-position: left 14px top calc(50% - 2px);
+  }
 }

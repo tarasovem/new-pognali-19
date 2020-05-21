@@ -15,6 +15,12 @@
   font-weight: 600;
   padding-top: 12px;
   padding-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    padding-top: 28px;
+    padding-bottom: 21px;
+  }
 }
 
 .calendar__previous,
@@ -24,6 +30,16 @@
   background-position: center;
   background-color: transparent;
   border: none;
+
+  @media (min-width: $tablet-width) {
+    background-size: 15px 28px;
+    width: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-size: 18px 34px;
+    width: 18px;
+  }
 }
 
 .calendar__previous {
@@ -41,6 +57,15 @@
   text-align: center;
   border-collapse: collapse;
   margin-top: 16px;
+  table-layout: fixed;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 10px;
+  }
 }
 
 .calendar__week  {
@@ -48,6 +73,26 @@
   font-weight: 400;
   padding-top: 8px;
   padding-bottom: 8px;
+  font-size: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    padding-left: 16px;
+    letter-spacing: 1.6px;
+    padding-bottom: 17px;
+  }
+
+  &:first-letter {
+    font-size: 14px;
+
+    @media (min-width: $tablet-width) {
+      font-size: inherit;
+    }
+  }
 }
 
 .calendar__week_weekend {
@@ -57,20 +102,79 @@
 .calendar__day {
   border: 1px solid #d4d9eb;
   padding: 9px 0 6px;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding-top: 23px;
+    padding-bottom: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    padding-top: 12px;
+    text-align: left;
+    padding-left: 16px;
+    padding-bottom: 38px;
+  }
 
   &_focus {
     border: 2px solid #ff5c23;
     box-sizing: border-box;
+
+    @media (min-width: $tablet-width) {
+      border-width: 4px;
+    }
+
+    @media (min-width: $desktop-width) {
+      border: none;
+      position: relative;
+
+      &::before {
+        content: "";
+        pointer-events: none;
+        width: 140px;
+        height: 68px;
+        border: 4px solid #ff5c23;
+        top: -3px;
+        left: -3px;
+        display: block;
+        position: absolute;
+        z-index: 10;
+      }
+    }
   }
 
   &_selected {
     background-color: #1d2e5b;
     color: $color_white;
+    position: relative;
   }
 
   &_future {
     color: $color_tundora;
     background-color: #edeff6;
+  }
+
+  &_first {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: inline;
+    }
+  }
+
+  &_check {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      left: 16px;
+      bottom: 12px;
+      display: block;
+      letter-spacing: 1.6px;
+    }
   }
 }
 
