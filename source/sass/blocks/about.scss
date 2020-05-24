@@ -206,10 +206,10 @@
 
     margin-top: 53px;
 
-    padding-top: 28px;
+    padding-top: 30px;
     padding-right: 90px;
     padding-left: 33px;
-    padding-bottom: 29px;
+    padding-bottom: 27px;
 
     border-radius: 20px;
 
@@ -284,6 +284,19 @@
 
   .about__details {
     margin-top: 85px;
+
+    &:hover,
+    &:focus {
+      background-color: #ffbd30;
+    }
+
+    &:active {
+      color: rgba(#161c35, 0.3);
+
+      &::after {
+        opacity: 0.3;
+      }
+    }
   }
 }
 

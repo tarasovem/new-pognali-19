@@ -53,6 +53,10 @@
       transform: translateY(-100%);
       transition: 0.3s ease;
     }
+
+    &:active .inner-links__span  {
+      opacity: 0.3;
+    }
   }
 
   .inner-links__span {

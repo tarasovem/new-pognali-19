@@ -84,7 +84,7 @@
 }
 
 .cta-form__input {
-  border: none;
+  border: 4px solid transparent;
   background: none;
   outline: none;
 
@@ -104,31 +104,50 @@
 
   &:hover {
     background-color: $main-color;
+
+    &::placeholder {
+      color: rgba(68, 68, 68, 0.5);
+    }
   }
 
   &:focus {
     background-color: $background__dark-blue;
     color: $white;
-    border: 4px solid $white;
+    border-color: $white;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
   }
 }
 
 .cta-form__button {
   border: none;
+  position: relative;
 
   flex-shrink: 0;
 
   width: 60px;
   height: 100%;
 
-  background: rgba($universal__bright-yellow, 1) url("../img/icons/mobile/triangle-arrow-right.svg");
-  background-repeat: no-repeat;
-  background-position: 27px 24px;
-  background-size: 10px 14px;
   border-radius: 10px;
 
   margin-right: 0;
   margin-left: auto;
+
+  background-color: #ffd74b;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 14px;
+    background-image: url("../img/icons/mobile/triangle-arrow-right.svg");
+    background-repeat: no-repeat;
+    top: 50%;
+    right: 23px;
+    transform: translateY(-50%);
+  }
 }
 
 .cta-form__button-description {
@@ -206,6 +225,10 @@
     border-bottom-right-radius: 20px;
 
     background-position: 36px 34px;
+
+    &::before {
+      right: 34px;
+    }
   }
 
   .cta-form__input {
@@ -260,10 +283,10 @@
   }
 
   .cta-form__input {
-    max-width: block;
     flex-grow: 1;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    font-family: "Blogger Sans", "Arial", sans-serif;
   }
 
   .cta-form__button {
@@ -271,6 +294,26 @@
     width: 324px;
     background-position: 279px 34px;
     text-align: left;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: #ffbd30;
+    }
+
+    &:active {
+      outline: none;
+
+      .cta-form__button-description {
+        color: rgba(29, 46, 91, 0.3);
+      }
+
+      &::before {
+        opacity: 0.3;
+      }
+    }
+
+
   }
 
   .cta-form__button-description {

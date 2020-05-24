@@ -30,12 +30,13 @@
   &--phone {
     background-color: $background__orange-color;
 
+    &:hover,
     &:focus {
       background-color: $background__orange-color__actions;
     }
 
-    &:hover {
-      background-color: $background__orange-color__actions;
+    &:active svg {
+      opacity: 0.3;
     }
 
     svg {
@@ -50,12 +51,13 @@
   &--email {
     background-color: $orangish-yellow-color;
 
+    &:hover,
     &:focus {
       background-color: $orangish-yellow-color__actions;
     }
 
-    &:hover {
-      background-color: $orangish-yellow-color__actions;
+    &:active svg {
+      opacity: 0.3;
     }
 
     svg {
@@ -71,7 +73,7 @@
     text-decoration: none;
 
     border-radius: 20px;
-    background-color: $yellow-color;
+    background-color: #ffd74b;
 
     font-size: 17px;
     line-height: 30px;
@@ -80,11 +82,8 @@
     text-align: center;
     color: $font-color;
 
+    &:hover,
     &:focus {
-      background-color: $yellow-color__actions;
-    }
-
-    &:hover {
       background-color: $yellow-color__actions;
     }
 
@@ -134,7 +133,7 @@
 
     &--auth {
       border-radius: 25px;
-      padding-top: 10px;
+      padding-top: 12px;
     }
   }
 }
