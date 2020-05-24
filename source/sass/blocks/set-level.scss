@@ -156,6 +156,10 @@
 
     margin-left: -1px;
 
+    &::before {
+      display: none;
+    }
+
     &::after {
       display: none;
     }

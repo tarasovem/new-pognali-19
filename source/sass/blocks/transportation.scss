@@ -157,6 +157,10 @@
     display: inline;
     margin-top: 17px;
 
+    &::before {
+      display: none;
+    }
+
     &::after {
       display: none;
     }
@@ -233,12 +237,18 @@
     }
   }
 
+  .transportation__button {
+    &--bus svg {
+      margin-left: -13px;
+    }
+  }
+
   .transportation__buttons {
     margin-top: 14px;
     margin-left: -3px;
 
     &--catalog {
-      margin-top: 15px;
+      margin-top: 12px;
       margin-left: -1px;
     }
   }
