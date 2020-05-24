@@ -5,6 +5,10 @@
   z-index: 3;
 }
 
+.header__top-menu {
+  position: relative;
+}
+
 @media (min-width: $tablet-breakpoint) {
   .header {
     &--index {

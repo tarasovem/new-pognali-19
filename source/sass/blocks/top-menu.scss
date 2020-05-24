@@ -16,6 +16,22 @@
   display: none;
 }
 
+.top-menu__wrapper.no-js {
+  display: none;
+}
+
+.top-menu__information {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.top-menu__information.no-js {
+  position: static;
+}
+
 @media (min-width: $tablet-breakpoint) {
   .top-menu__functions {
     margin-left: 25px;

@@ -4,19 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Погнали</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.min.css">
   </head>
   <body>
     <header class="header">
       <section class="top-menu header__top-menu">
-        <div class="wrapper top-menu__wrapper">
+        <!-- Удалить класс "no-js", если подключились скрипты -->
+        <div class="wrapper top-menu__wrapper no-js">
           <div class="functions top-menu__functions top-menu__functions--white">
             <a href="index.html" class="functions__link functions__link--white">
               <picture>
                 <source media="(min-width: 1440px)" srcset="./img/desktop/webp/logo-desktop-white@1x.webp 1x, ./img/desktop/webp/logo-desktop-white@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="./img/tablet/webp/logo-tablet-white@1x.webp 1x, ./img/tablet/webp/logo-tablet-white@2x.webp 2x">
                 <source srcset="./img/mobile/webp/logo-mobile-white@1x.webp 1x, ./img/mobile/webp/logo-mobile-white@2x.webp 2x">
-
 
                 <source media="(min-width: 1440px)" srcset="./img/desktop/logo-desktop-white@1x.png 1x, ./img/desktop/logo-desktop-white@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="./img/tablet/logo-tablet-white@1x.png 1x, ./img/tablet/logo-tablet-white@2x.png 2x">
@@ -63,9 +63,13 @@
             </li>
           </ul>
         </div>
-
-          <div class="information top-menu__information">
+          <!-- Удалить класс "no-js", если подключились скрипты -->
+          <div class="information top-menu__information no-js">
             <div class="wrapper information__wrapper">
+              <div class="information__header">
+                <a class="information__logo">Погнали?</a>
+                <button class="information__close-button" type="button">Закрыть</button>
+              </div>
             <ul class="inner-links information__inner-links">
               <li class="inner-links__item">
                 <a class="inner-links__link inner-links__link--active" href="./index.html">О сервисе</a>
@@ -103,16 +107,25 @@
               <li class="social__item">
                 <a class="social__link social__link--facebook" href="">
                   <span class="visually-hidden">Наш Facebook</span>
+                  <svg width="23" height="12" aria-hidden="true">
+                    <use xlink:href="./img/sprite.svg#facebook"></use>
+                  </svg>
                 </a>
               </li>
               <li class="social__item">
                 <a class="social__link social__link--vk" href="">
                   <span class="visually-hidden">Наш VK</span>
+                  <svg width="23" height="12" aria-hidden="true">
+                    <use xlink:href="./img/sprite.svg#vk"></use>
+                  </svg>
                 </a>
               </li>
               <li class="social__item">
                 <a class="social__link social__link--instagram" href="">
                   <span class="visually-hidden">Наш instagram</span>
+                  <svg width="23" height="12" aria-hidden="true">
+                    <use xlink:href="./img/sprite.svg#instagram"></use>
+                  </svg>
                 </a>
               </li>
             </ul>
