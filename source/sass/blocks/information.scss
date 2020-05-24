@@ -2,7 +2,7 @@
   width: 100%;
 
   background: $white;
-
+}
 
   .information__wrapper {
     display: flex;
@@ -11,7 +11,6 @@
     position: relative;
     padding-top: 24px;
   }
-}
 
 .information__auth-link {
   @include reset;
@@ -57,17 +56,30 @@
   width: 100%;
   padding-right: 28px;
   padding-left: 25px;
-  margin-bottom: 73px;
+  margin-bottom: 71px;
+  padding-top: 2px;
 }
 
 .information__logo {
   font-size: 0;
   width: 100px;
-  height: 15px;
+  height: 19px;
   background-image: url('../img/mobile/logo-mobile-blue@1x.png');
   background-repeat: no-repeat;
   background-position: 0 0;
+
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) {
+    background-image: url('../img/mobile/logo-mobile-blue@2x.png');
+    background-size: 100px 19px;
+  }
 }
+
 
 .information__close-button {
   background-color: transparent;
@@ -76,7 +88,6 @@
   height: 20px;
   font-size: 0;
   position: relative;
-  transform: translateY(2px);
   cursor: pointer;
   opacity: 0.3;
 
@@ -105,29 +116,83 @@
 
 @media (min-width: $tablet-breakpoint) {
   .information {
-    padding-left: 97px;
     align-items: initial;
-
-    display: none;
   }
 
   .information__inner-links {
     margin-top: 24px;
+    align-self: flex-start;
+    padding-left: 97px;
   }
 
   .information__auth-link {
-    display: none;
+    margin-top: 0;
+    font-size: 20px;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    padding: 17px 30px 13px;
+    line-height: 1;
+    height: auto;
+    max-width: 200px;
   }
 
   .information__contacts {
     margin-left: 0;
-    margin-top: 133px;
+    margin-top: 132px;
 
-    width: 100%;
+    padding-left: 97px;
+    align-self: flex-start;
   }
 
   .information__social {
     justify-content: flex-start;
+    margin-top: 120px;
+    align-self: flex-start;
+    padding-left: 105px;
+    padding-bottom: 69px;
+
+    .social__link {
+      color: #cccccc;
+    }
+
+    .social__link--facebook svg {
+      width: 14px;
+      height: 28px;
+    }
+
+    .social__link--vk svg {
+      width: 31px;
+      height: 16px;
+    }
+
+    .social__link--instagram svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .information__logo {
+    width: 166px;
+    height: 42px;
+    background-image: url('../img/tablet/logo-tablet-blue@1x.png');
+    background-size: 166px 42px;
+  }
+
+  .information__wrapper {
+    padding-top: 43px;
+  }
+
+  .information__header {
+    padding-left: 41px;
+    padding-right: 41px;
+    position: relative;
+  }
+
+  .information__close-button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 

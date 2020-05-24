@@ -71,6 +71,8 @@
   .contacts__link {
     font-size: 28px;
     line-height: 28px;
+    display: flex;
+    align-items: center;
 
     span {
       padding-top: 22px;
@@ -78,10 +80,11 @@
     }
 
     &::before {
-      width: 68px;
-      height: 68px;
+      width: 67px;
+      height: 67px;
 
       background-size: 27px 27px;
+      margin-right: 24px;
     }
 
     svg {
