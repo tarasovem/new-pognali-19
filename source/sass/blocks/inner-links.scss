@@ -44,5 +44,28 @@
     font-size: 20px;
     line-height: 30px;
     font-weight: 500;
+    height: 1em;
+    display: inline-block;
+    overflow: hidden;
+
+    &:hover .inner-links__span ,
+    &:focus .inner-links__span  {
+      transform: translateY(-100%);
+      transition: 0.3s ease;
+    }
+  }
+
+  .inner-links__span {
+    position: relative;
+    display: inline-block;
+    transform: translateY(0);
+    transition: 0.3s ease;
+
+    &::before {
+      position: absolute;
+      top: 100%;
+      content: attr(data-hover);
+      color: #ffd74b;
+    }
   }
 }
