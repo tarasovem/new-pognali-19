@@ -30,6 +30,10 @@
 
 .top-menu__information.no-js {
   position: static;
+
+  .information__close-button {
+    display: none;
+  }
 }
 
 @media (min-width: $tablet-breakpoint) {

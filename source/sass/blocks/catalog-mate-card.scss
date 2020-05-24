@@ -24,6 +24,8 @@
 
   width: 70px;
   height: 70px;
+  display: block;
+  z-index: 10;
 }
 
 .catalog-mate-card__img {
@@ -70,6 +72,12 @@
       background-color: $background__greenish;
     }
   }
+}
+
+.catalog-mate-card__link {
+  text-decoration: inherit;
+  color: inherit;
+
 }
 
 .catalog-mate-card__lets-go-likes {

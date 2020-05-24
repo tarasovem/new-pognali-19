@@ -12,7 +12,7 @@
         <!-- Удалить класс "no-js", если подключились скрипты -->
         <div class="wrapper top-menu__wrapper no-js">
           <div class="functions top-menu__functions top-menu__functions--white top-menu__functions--index">
-            <a href="index.html" class="functions__link functions__link--white">
+            <a class="functions__link functions__link--white">
               <picture>
                 <source media="(min-width: 1440px)" srcset="./img/desktop/webp/logo-desktop-white@1x.webp 1x, ./img/desktop/webp/logo-desktop-white@2x.webp 2x" type="image/webp">
                 <source media="(min-width: 768px)" srcset="./img/tablet/webp/logo-tablet-white@1x.webp 1x, ./img/tablet/webp/logo-tablet-white@2x.webp 2x" type="image/webp">
@@ -533,7 +533,7 @@
           </svg>
           <span> ул. Большая Конюшенная, 19/8 </span>
         </p>
-        <a class="office__link" href="">
+        <a class="office__link" href="https://yandex.ru/maps/?um=constructor%3A14c2b01f1e7176808d26a785f1efc43387ffb1e79a5b11bbf1d0536790efd12c&source=constructorLink" target="_blank">
           <span class="office__span">Проложить маршрут</span>
           <svg width="10" height="14" aria-hidden="true">
             <use xlink:href="./img/sprite.svg#triangle-arrow-right"></use>
@@ -544,6 +544,7 @@
 
       <section class="map main__map">
         <h2 class="visually-hidden">Карта</h2>
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A5d36b6cb2992d1b633f4c355e3c588bf720ce5ac8aa052bc13119bd32dcdcc83&amp;source=constructor" width="100%" height="480" frameborder="0"></iframe>
       </section>
     </main>
 
@@ -620,7 +621,6 @@
       <a href="" class="business-rates__link">Закрыть окно</a>
     </div>
 
-    <script src="./js/open-menu.js"></script>
     <script src="./js/picturefill.min.js"></script>
   </body>
 </html>

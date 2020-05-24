@@ -933,41 +933,41 @@
                 <div class="transportation__buttons transportation__buttons--catalog">
                   <label class="transportation__button transportation__button--plane">
                     <input class="visually-hidden transportation__checkbox" type="checkbox" name="plane" checked>
-                    <div class="transportation__svg-wrapper">
+                    <span class="transportation__svg-wrapper">
                       <svg width="14" height="16" aria-hidden="true">
                         <use xlink:href="./img/sprite.svg#plane"></use>
                       </svg>
-                    </div>
+                    </span>
                     <span class="transport__description">Авиаперелет</span>
                   </label>
 
                   <label class="transportation__button transportation__button--bus" >
                     <input class="visually-hidden transportation__checkbox" type="checkbox" name="bus" checked>
-                    <div class="transportation__svg-wrapper">
+                    <span class="transportation__svg-wrapper">
                       <svg width="13" height="16" aria-hidden="true">
                         <use xlink:href="./img/sprite.svg#bus"></use>
                       </svg>
-                    </div>
+                    </span>
                     <span class="transport__description">Автотранспорт</span>
                   </label>
 
                   <label class="transportation__button transportation__button--bike">
                     <input class="visually-hidden transportation__checkbox" type="checkbox" name="bike">
-                    <div class="transportation__svg-wrapper">
+                    <span class="transportation__svg-wrapper">
                       <svg width="19" height="17" aria-hidden="true">
                         <use xlink:href="./img/sprite.svg#bike"></use>
                       </svg>
-                    </div>
+                    </span>
                     <span class="transport__description">Велосипед</span>
                   </label>
 
                   <label class="transportation__button transportation__button--run">
                     <input class="visually-hidden transportation__checkbox" type="checkbox" name="run" checked>
-                    <div class="transportation__svg-wrapper">
+                    <span class="transportation__svg-wrapper">
                       <svg width="15" height="17" aria-hidden="true">
                         <use xlink:href="./img/sprite.svg#run"></use>
                       </svg>
-                    </div>
+                    </span>
                     <span class="transport__description">Пешком</span>
                   </label>
                 </div>
@@ -1003,7 +1003,7 @@
           <ul class="mates-sorted__list">
             <li class="mates-sorted__item">
               <div class="catalog-mate-card mates-sorted__catalog-mate-card">
-                <div class="catalog-mate-card__img-wrapper">
+                <a class="catalog-mate-card__img-wrapper" href="#">
                   <picture>
                     <source media="(min-width: 1440px)" srcset="./img/desktop/webp/firsova-desktop@1x.webp 1x, ./img/desktop/webp/firsova-desktop@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="./img/tablet/webp/firsova-tablet@1x.webp 1x, ./img/tablet/webp/firsova-tablet@2x.webp 2x">
@@ -1014,12 +1014,12 @@
                     <img class="catalog-mate-card__img" src="./img/mobile/firsova-mobile@1x.jpg" srcset="../img/mobile/firsova-mobile@2x.jpg 2x" width="70" height="70" alt="фото пользователя">
                   </picture>
 
-                </div>
+                </a>
 
 
                 <div class="catalog-mate-card__first-block">
                   <div class="catalog-mate-card__name-hashtags">
-                    <h3 class="catalog-mate-card__name">Таня Фирсова <span class="visually-hidden">offline</span></h3>
+                    <h3 class="catalog-mate-card__name"><a href="#" class="catalog-mate-card__link">Таня Фирсова</a> <span class="visually-hidden">offline</span></h3>
 
                     <ul class="hashtags hashtags--catalog catalog-mate-card__hashtags">
                       <li class="hashtags__item">
@@ -1047,7 +1047,7 @@
                     <a class="catalog-mate-card__go" href="">Позвать!</a>
                     <button class="catalog-mate-card__like-btn catalog-mate-card__like-btn--active" type="button">
                       <span class="visually-hidden">Нравится</span>
-                      <p class="catalog-mate-card__like-number">1,5 М</p>
+                      <span class="catalog-mate-card__like-number">1,5 М</span>
                     </button>
                   </div>
                 </div>
@@ -1118,7 +1118,7 @@
 
             <li class="mates-sorted__item">
               <div class="catalog-mate-card mates-sorted__catalog-mate-card">
-                <div class="catalog-mate-card__img-wrapper">
+                <a class="catalog-mate-card__img-wrapper" href="form.html">
                   <picture>
                     <source media="(min-width: 1440px)" srcset="./img/desktop/webp/demin-desktop@1x.webp 1x, ./img/desktop/webp/demin-desktop@2x.webp 2x">
                       <source media="(min-width: 768px)" srcset="./img/tablet/webp/demin-tablet@1x.webp 1x, ./img/tablet/webp/demin-tablet@2x.webp 2x">
@@ -1128,12 +1128,12 @@
                     <source media="(min-width: 768px)" srcset="./img/tablet/demin-tablet@1x.jpg 1x, ./img/tablet/demin-tablet@2x.jpg2x">
                     <img class="catalog-mate-card__img" src="./img/mobile/demin-mobile@1x.jpg" srcset="../img/mobile/demin-mobile@2x.jpg 2x" width="70" height="70" alt="фото пользователя">
                   </picture>
-                </div>
+                </a>
 
 
                 <div class="catalog-mate-card__first-block">
                   <div class="catalog-mate-card__name-hashtags">
-                    <h3 class="catalog-mate-card__name">Петя Демин <span class="visually-hidden">offline</span></h3>
+                    <h3 class="catalog-mate-card__name"><a class="catalog-mate-card__link" href="form.html">Петя Демин</a> <span class="visually-hidden">offline</span></h3>
 
                     <ul class="hashtags hashtags--catalog catalog-mate-card__hashtags">
                       <li class="hashtags__item">
@@ -1158,7 +1158,7 @@
                     <a class="catalog-mate-card__go" href="">Позвать!</a>
                     <button class="catalog-mate-card__like-btn" type="button">
                       <span class="visually-hidden">Нравится</span>
-                      <p class="catalog-mate-card__like-number">1500</p>
+                      <span class="catalog-mate-card__like-number">1500</span>
                     </button>
                   </div>
                 </div>
@@ -1224,10 +1224,9 @@
               </div>
             </li>
 
-
             <li class="mates-sorted__item">
               <div class="catalog-mate-card mates-sorted__catalog-mate-card">
-                <div class="catalog-mate-card__img-wrapper">
+                <a class="catalog-mate-card__img-wrapper" href="#">
                   <picture>
                     <source media="(min-width: 1440px)" srcset="./img/desktop/webp/smolov-desktop@1x.webp 1x, ./img/desktop/webp/smolov-desktop@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="./img/tablet/webp/smolov-tablet@1x.webp 1x, ./img/tablet/webp/smolov-tablet@2x.webp 2x">
@@ -1237,12 +1236,12 @@
                     <source media="(min-width: 768px)" srcset="./img/tablet/smolov-tablet@1x.jpg 1x, ./img/tablet/smolov-tablet@2x.jpg2x">
                     <img class="catalog-mate-card__img" src="./img/mobile/smolov-mobile@1x.jpg" srcset="../img/mobile/smolov-mobile@2x.jpg 2x" width="70" height="70" alt="фото пользователя">
                   </picture>
-                </div>
+                </a>
 
 
                 <div class="catalog-mate-card__first-block">
                   <div class="catalog-mate-card__name-hashtags">
-                    <h3 class="catalog-mate-card__name">Марк Смолов <span class="visually-hidden">offline</span></h3>
+                    <h3 class="catalog-mate-card__name"><a class="catalog-mate-card__link" href="#">Марк Смолов</a> <span class="visually-hidden">offline</span></h3>
 
                     <ul class="hashtags hashtags--catalog catalog-mate-card__hashtags">
                       <li class="hashtags__item">
@@ -1267,7 +1266,7 @@
                     <a class="catalog-mate-card__go" href="">Позвать!</a>
                     <button class="catalog-mate-card__like-btn" type="button">
                       <span class="visually-hidden">Нравится</span>
-                      <p class="catalog-mate-card__like-number">170</p>
+                      <span class="catalog-mate-card__like-number">170</span>
                     </button>
                   </div>
                 </div>
@@ -1336,10 +1335,9 @@
               </div>
             </li>
 
-
             <li class="mates-sorted__item">
               <div class="catalog-mate-card mates-sorted__catalog-mate-card">
-                <div class="catalog-mate-card__img-wrapper">
+                <a class="catalog-mate-card__img-wrapper" href="#">
                   <picture>
                     <source media="(min-width: 1440px)" srcset="./img/desktop/webp/rogovaya-desktop@1x.webp 1x, ./img/desktop/webp/rogovaya-desktop@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="./img/tablet/webp/rogovaya-tablet@1x.webp 1x, ./img/tablet/webp/rogovaya-tablet@2x.webp 2x">
@@ -1349,11 +1347,12 @@
                     <source media="(min-width: 768px)" srcset="./img/tablet/rogovaya-tablet@1x.jpg 1x, ./img/tablet/rogovaya-tablet@2x.jpg2x">
                     <img class="catalog-mate-card__img" src="./img/mobile/rogovaya-mobile@1x.jpg" srcset="../img/mobile/rogovaya-mobile@2x.jpg 2x" width="70" height="70" alt="фото пользователя">
                   </picture>
-                </div>
+                </a>
 
                 <div class="catalog-mate-card__first-block">
                   <div class="catalog-mate-card__name-hashtags">
-                    <h3 class="catalog-mate-card__name catalog-mate-card__name--online">Лариса Роговая <span class="visually-hidden">offline</span></h3>
+                    <h3 class="catalog-mate-card__name catalog-mate-card__name--online">
+                      <a class="catalog-mate-card__link" href="#">Лариса Роговая</a> <span class="visually-hidden">offline</span></h3>
 
                     <ul class="hashtags hashtags--catalog catalog-mate-card__hashtags">
                       <li class="hashtags__item">
@@ -1375,7 +1374,7 @@
                     <a class="catalog-mate-card__go" href="">Позвать!</a>
                     <button class="catalog-mate-card__like-btn" type="button">
                       <span class="visually-hidden">Нравится</span>
-                      <p class="catalog-mate-card__like-number">23</p>
+                      <span class="catalog-mate-card__like-number">23</span>
                     </button>
                   </div>
                 </div>
@@ -1440,6 +1439,7 @@
                 </div>
               </div>
             </li>
+          </ul>
 
           <a class="mates-sorted__link" href="">Показать еще</a>
 
@@ -1524,7 +1524,6 @@
       </div>
     </footer>
 
-    <script src="./js/open-menu.js"></script>
     <script src="./js/picturefill.min.js"></script>
   </body>
 </html>
