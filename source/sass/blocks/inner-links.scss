@@ -48,13 +48,13 @@
     display: inline-block;
     overflow: hidden;
 
-    &:hover .inner-links__span ,
-    &:focus .inner-links__span  {
+    &:hover .inner-links__span,
+    &:focus .inner-links__span {
       transform: translateY(-100%);
       transition: 0.3s ease;
     }
 
-    &:active .inner-links__span  {
+    &:active .inner-links__span {
       opacity: 0.3;
     }
   }
