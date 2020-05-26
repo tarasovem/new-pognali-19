@@ -8,15 +8,15 @@
   </head>
   <body>
     <header class="header">
-      <section class="top-menu header__top-menu">
+      <div class="top-menu header__top-menu">
         <!-- Удалить класс "no-js", если подключились скрипты -->
         <div class="wrapper top-menu__wrapper no-js">
           <div class="functions top-menu__functions top-menu__functions--white">
             <a href="index.html" class="functions__link functions__link--white">
               <picture>
-                <source media="(min-width: 1440px)" srcset="./img/desktop/webp/logo-desktop-white@1x.webp 1x, ./img/desktop/webp/logo-desktop-white@2x.webp 2x">
-                <source media="(min-width: 768px)" srcset="./img/tablet/webp/logo-tablet-white@1x.webp 1x, ./img/tablet/webp/logo-tablet-white@2x.webp 2x">
-                <source srcset="./img/mobile/webp/logo-mobile-white@1x.webp 1x, ./img/mobile/webp/logo-mobile-white@2x.webp 2x">
+                <source media="(min-width: 1440px)" srcset="./img/desktop/webp/logo-desktop-white@1x.webp 1x, ./img/desktop/webp/logo-desktop-white@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 768px)" srcset="./img/tablet/webp/logo-tablet-white@1x.webp 1x, ./img/tablet/webp/logo-tablet-white@2x.webp 2x" type="image/webp">
+                <source srcset="./img/mobile/webp/logo-mobile-white@1x.webp 1x, ./img/mobile/webp/logo-mobile-white@2x.webp 2x" type="image/webp">
 
                 <source media="(min-width: 1440px)" srcset="./img/desktop/logo-desktop-white@1x.png 1x, ./img/desktop/logo-desktop-white@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="./img/tablet/logo-tablet-white@1x.png 1x, ./img/tablet/logo-tablet-white@2x.png 2x">
@@ -139,7 +139,7 @@
           </div>
 
 
-      </section>
+      </div>
     </header>
     <main class="main">
 
@@ -156,7 +156,7 @@
         <form class="change-bio__form" action="https://echo.htmlacademy.ru" method="post">
           <div class="change-bio__content-wrapper">
             <p class="change-bio__level">
-              <svg class="change-bio__pie-graph" width="103" height="103" stroke-dasharray="80 100" viewBox="0 0 32 32" role="presentation" aria-hidden="true">
+              <svg class="change-bio__pie-graph" width="103" height="103" stroke-dasharray="80 100" viewBox="0 0 32 32" aria-hidden="true">
                 <circle r="15" cx="16" cy="16" stroke-width="1"></circle>
               </svg>
               <span class="change-bio__number">80</span>
@@ -172,7 +172,7 @@
                       <use xlink:href="./img/sprite.svg#plane"></use>
                     </svg>
                   </span>
-                  <span class="transport__description">Авиаперелет</span>
+                  <span class="visually-hidden">Авиаперелет</span>
                 </label>
 
                 <label class="transportation__button transportation__button--bus" >
@@ -182,7 +182,7 @@
                       <use xlink:href="./img/sprite.svg#bus"></use>
                     </svg>
                   </span>
-                  <span class="transport__description">Автотранспорт</span>
+                  <span class="visually-hidden">Автотранспорт</span>
                 </label>
 
                 <label class="transportation__button transportation__button--bike">
@@ -192,7 +192,7 @@
                       <use xlink:href="./img/sprite.svg#bike"></use>
                     </svg>
                   </span>
-                  <span class="transport__description">Велосипед</span>
+                  <span class="visually-hidden">Велосипед</span>
                 </label>
 
                 <label class="transportation__button transportation__button--run">
@@ -205,12 +205,12 @@
                   <span class="transport__description">Пешком</span>
                 </label>
               </div>
-              <legend class="change-bio__legend">Транспорт</legend>
+              <div class="change-bio__legend">Транспорт</div>
             </fieldset>
 
             <picture>
-              <source media="(min-width: 1440px)" srcset="./img/desktop/webp/demin-desktop@1x.webp 1x, ./img/desktop/webp/demin-desktop@2x.webp 2x">
-              <source srcset="./img/tablet/webp/demin-tablet@1x.webp 1x, ./img/tablet/webp/demin-tablet@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="./img/desktop/webp/demin-desktop@1x.webp 1x, ./img/desktop/webp/demin-desktop@2x.webp 2x" type="image/webp">
+              <source srcset="./img/tablet/webp/demin-tablet@1x.webp 1x, ./img/tablet/webp/demin-tablet@2x.webp 2x" type="image/webp">
 
               <source media="(min-width: 1440px)" srcset="./img/desktop/demin-desktop@1x.jpg 1x, ./img/desktop/demin-desktop@2x.jpg 2x">
               <img class="change-bio__user-img" width="100" height="100" src="./img/tablet/demin-tablet@1x.jpg" srcset="./img/tablet/demin-tablet@2x.jpg 2x" alt="фото пользователя">
@@ -225,7 +225,7 @@
 
           <label class="change-bio__fieldset change-bio__fieldset--tags">
             <span class="change-bio__legend change-bio__legend--tags">Тэги</span>
-            <textarea class="change-bio__tags" name="tags" rows="1" cols="20">#бургер #бар #футбол #концерт #крафт</textarea>
+            <textarea class="change-bio__tags" name="tags" rows="1" cols="20" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
           </label>
         </form>
         </div>
@@ -373,7 +373,7 @@
 
               <ul class="calendar__days">
                 <li class="calendar__day">
-                  <a class="calendar__day-link" href>23</a>
+                  <a class="calendar__day-link" href="">23</a>
                 </li>
                 <li class="calendar__day">
                   <a class="calendar__day-link" href="">24</a>
@@ -695,7 +695,9 @@
               </div>
               <label class="step-description__label">
                 <span class="visually-hidden">Описание данной части маршрута</span>
+                <!-- При ошибке поля формы добавить класс "step-description__text_error" -->
                 <textarea class="step-description__text" name="plan" rows="8" cols="60" placeholder="План действий"></textarea>
+                <span class="step-description__error-message">Это поле должно быть заполнено</span>
               </label>
             </div>
 
@@ -705,7 +707,9 @@
               </div>
               <label class="step-description__label">
                 <span class="visually-hidden">Описание данной части маршрута</span>
+                <!-- При ошибке поля формы добавить класс "step-description__text_error" -->
                 <textarea class="step-description__text" name="plan" rows="8" cols="60">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                <span class="step-description__error-message">Это поле должно быть заполнено</span>
               </label>
             </div>
 
@@ -725,9 +729,9 @@
       <h2 class="visually-hidden">Наши социальные сети</h2>
       <a href="" class="footer__link">
         <picture>
-          <source media="(min-width: 1440px)" srcset="./img/desktop/webp/logo-desktop-blue@1x.webp 1x, ./img/desktop/webp/logo-desktop-blue@2x.webp 2x">
-          <source media="(min-width: 768px)" srcset="./img/tablet/webp/logo-tablet-blue@1x.webp 1x, ./img/tablet/webp/logo-tablet-blue@2x.webp 2x">
-          <source srcset="./img/mobile/webp/logo-mobile-blue@1x.webp 1x, ./img/mobile/webp/logo-mobile-blue@2x.webp 2x">
+          <source media="(min-width: 1440px)" srcset="./img/desktop/webp/logo-desktop-blue@1x.webp 1x, ./img/desktop/webp/logo-desktop-blue@2x.webp 2x" type="image/webp">
+          <source media="(min-width: 768px)" srcset="./img/tablet/webp/logo-tablet-blue@1x.webp 1x, ./img/tablet/webp/logo-tablet-blue@2x.webp 2x" type="image/webp">
+          <source srcset="./img/mobile/webp/logo-mobile-blue@1x.webp 1x, ./img/mobile/webp/logo-mobile-blue@2x.webp 2x" type="image/webp">
 
           <source media="(min-width: 1440px)" srcset="./img/desktop/logo-desktop-blue@1x.png 1x, ./img/desktop/logo-desktop-blue@2x.png 2x">
           <source media="(min-width: 768px)" srcset="./img/tablet/logo-tablet-blue@1x.png 1x, ./img/tablet/logo-tablet-blue@2x.png 2x">

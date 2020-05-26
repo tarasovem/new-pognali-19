@@ -116,6 +116,10 @@
       opacity: 0.3;
     }
   }
+
+  .main__map iframe {
+    height: 600px;
+  }
 }
 
 @media (min-width: $desktop-breakpoint) {

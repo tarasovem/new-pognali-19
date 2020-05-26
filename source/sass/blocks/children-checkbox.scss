@@ -1,4 +1,5 @@
 .children-checkbox__label-name {
+  cursor: pointer;
   position: relative;
   font-size: 15px;
   line-height: 29px;
@@ -55,6 +56,49 @@
     &::before {
       background-size: 24px 12px;
       background-position: 7px 11px;
+    }
+  }
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .children-checkbox {
+    display: flex;
+    align-items: center;
+  }
+
+  .children-checkbox__label-name {
+    padding-top: 0;
+    line-height: 36px;
+    margin-top: 26px;
+
+    &:hover,
+    &:focus {
+      &::before {
+        border-color: #959bb2;
+      }
+    }
+
+    &:active {
+      &::before {
+        border-color: #e2e5f1;
+        background-color: #e2e5f1;
+      }
+    }
+
+    &::before {
+      margin-top: -1px;
+    }
+  }
+
+  .children-checkbox__label input:checked + .children-checkbox__label-name {
+    &:active {
+      &::before {
+        opacity: 0.3;
+      }
+    }
+
+    &::before {
+      background-position: center;
     }
   }
 }

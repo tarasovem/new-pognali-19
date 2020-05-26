@@ -143,5 +143,27 @@
 
   .add-block__letter-link {
     border-radius: 4px;
+
+    &:hover,
+    &:focus {
+      border-color: #959bb2;
+    }
+
+    &:active {
+      background-color: #1d2e5b;
+      border-color: #1d2e5b;
+      color: #ffffff;
+    }
+  }
+
+  .add-block__country-link {
+    &:hover,
+    &:focus {
+      color: #1d2e5b;
+    }
+
+    &:active {
+      color: rgba(29, 46, 91, 0.3);
+    }
   }
 }

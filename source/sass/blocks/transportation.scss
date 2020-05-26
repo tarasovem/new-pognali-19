@@ -239,6 +239,8 @@
   }
 
   .transportation__button {
+    cursor: pointer;
+
     &--bus svg {
       margin-left: -13px;
     }

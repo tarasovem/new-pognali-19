@@ -57,3 +57,16 @@
     }
   }
 }
+
+@media (min-width: $desktop-breakpoint) {
+  .hashtags__item {
+    &:hover a,
+    &:focus a {
+      color: #1d2e5b;
+    }
+
+    &:active a {
+      color: rgba(29, 46, 91, 0.3);
+    }
+  }
+}

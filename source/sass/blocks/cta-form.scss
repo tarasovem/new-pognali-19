@@ -287,6 +287,19 @@
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     font-family: "Blogger Sans", "Arial", sans-serif;
+
+    &_error {
+      border-color: #ffefef;
+      background-color: #ffefef;
+
+      &::placeholder {
+        color: #ff0000;
+
+        &:hover {
+          color: #ff0000;
+        }
+      }
+    }
   }
 
   .cta-form__button {

@@ -146,7 +146,7 @@
 
       display: block;
       width: 2px;
-      height: 281px;
+      height: 278px;
 
       position: absolute;
       top: 13px;
@@ -511,5 +511,48 @@
 
   .steps-ordered__previous {
     margin-right: 120px;
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    &::after {
+      top: 40px;
+    }
+  }
+
+  .steps-ordered__next {
+    &:active {
+      &::after {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .steps-ordered__submit {
+    cursor: pointer;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      background-color: #ffbd30;
+    }
+
+    &:active {
+      color: rgba(29, 46, 91, 0.3);
+
+      &::after {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .steps-ordered__children-checkbox {
+    margin-top: 0;
   }
 }

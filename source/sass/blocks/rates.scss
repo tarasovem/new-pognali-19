@@ -267,6 +267,13 @@
     line-height: 33px;
   }
 
+  .rates__text-line {
+    &:first-child {
+      display: inline-block;
+      width: 380px;
+    }
+  }
+
   .rates__link {
     position: relative;
 
@@ -346,6 +353,13 @@
   .rates__link {
     margin-top: 7px;
     margin-left: 91px;
+  }
+
+  .rates__text-line {
+    &:first-child {
+      display: inline-block;
+      width: 500px;
+    }
   }
 }
 

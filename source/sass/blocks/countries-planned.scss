@@ -534,11 +534,43 @@
         top: 25px;
         right: 25px;
         background-image: url("../img/icons/mobile/small-cross--white.svg");
+        opacity: 0.3;
+        outline: none;
+
+        &:hover,
+        &:focus {
+          opacity: 1;
+        }
+
+        &:active {
+          outline: none;
+          opacity: 0.1;
+        }
+
+        &:visited {
+          outline: none;
+        }
       }
     }
   }
 
   .countries-planned__delete {
+    outline: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      &::after {
+        opacity: 0.1;
+      }
+    }
+
     &::after {
       left: 96px;
     }
@@ -558,6 +590,19 @@
     &::before {
       right: -52px;
       bottom: 30px;
+    }
+  }
+
+  .countries-planned__country-name {
+    outline: none;
+
+    &:hover,
+    &:focus {
+      border-color: #959bb2;
+
+      &::after {
+        opacity: 0.5;
+      }
     }
   }
 }

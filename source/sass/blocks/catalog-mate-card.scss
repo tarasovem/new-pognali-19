@@ -539,6 +539,17 @@
     flex-direction: row;
   }
 
+  .catalog-mate-card__link {
+    &:hover,
+    &:focus {
+      color: rgba(29, 46, 91, 0.6);
+    }
+
+    &:active {
+      color: rgba(29, 46, 91, 0.3);
+    }
+  }
+
   .catalog-mate-card__img-wrapper {
     margin-top: 0;
     margin-left: 0;
@@ -659,5 +670,39 @@
     margin-top: 0;
     margin-left: 45px;
     margin-right: 0;
+  }
+
+  .catalog-mate-card__like-btn:hover {
+    cursor: pointer;
+
+    &::before {
+      background-image: url("../img/icons/mobile/heart-hover.svg");
+      background-color: #e2e5f2;
+    }
+  }
+
+  .catalog-mate-card__like-btn:active {
+    outline: none;
+
+    &::before {
+      background-color: #e2e5f2;
+      background-image: url("../img/icons/mobile/heart.svg");
+    }
+  }
+
+  .catalog-mate-card__like-btn--active:hover {
+    &::before {
+      background-color: #f9d8d8;
+    }
+  }
+
+  .catalog-mate-card__like-btn--active {
+    outline: none;
+  }
+
+  .catalog-mate-card__like-btn--active:active {
+    &::before {
+      background-image: url("../img/icons/mobile/heart-active-hover.svg");
+    }
   }
 }

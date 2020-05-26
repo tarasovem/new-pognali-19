@@ -129,7 +129,7 @@
 
   .plans__item {
     width: 618px;
-    padding-bottom: 17px;
+    padding-bottom: 16px;
   }
 
   .plans__place {
@@ -137,14 +137,16 @@
     font-size: 24px;
     line-height: 50px;
 
-    padding-top: 25px;
     padding-left: 35px;
-    padding-bottom: 22px;
+
+    padding-top: 27px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(#444444, 0.3);
 
 
     &::before {
       position: absolute;
-      top: 42px;
+      top: 44px;
       right: 26px;
 
       font-size: 20px;
@@ -158,6 +160,8 @@
     letter-spacing: 2px;
 
     padding-left: 32px;
+    width: 200px;
+    flex: none;
   }
 
   .plans__dates {
@@ -166,8 +170,11 @@
     letter-spacing: 2.2px;
 
     padding-top: 19px;
-    margin-right: 56px;
-    margin-left: auto;
+    margin-right: auto;
+    margin-left: 17px;
+    width: 200px;
+    padding-left: 0;
+    flex: none;
   }
 
   .plans__link {
@@ -217,7 +224,7 @@
     width: 1256px;
     flex-direction: row;
     justify-content: space-between;
-    padding-bottom: 4px;
+    padding-bottom: 0;
     margin-top: 14px;
 
     &:first-child {
@@ -231,6 +238,8 @@
 
     padding-top: 22px;
     padding-left: 95px;
+    padding-bottom: 26px;
+    border-bottom: none;
 
     &::before {
       right: auto;
@@ -244,7 +253,7 @@
   .plans__link {
     font-size: 20px;
     line-height: 18px;
-    padding-top: 38px;
+    padding-top: 41px;
   }
 
   .plans__mates {
@@ -252,7 +261,9 @@
   }
 
   .plans__dates {
-    margin-right: 100px;
+    margin-right: 59px;
+    margin-left: 0;
+    width: 220px;
   }
 
   .plans__link {

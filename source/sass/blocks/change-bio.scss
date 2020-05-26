@@ -173,6 +173,10 @@
   &:focus {
     border: 1px solid $blue-700-color;
   }
+
+  &::placeholder {
+    color: rgba(68, 68, 68, 0.6);
+  }
 }
 
 .change-bio__transportation {
@@ -379,6 +383,7 @@
     order: 1;
     margin: 0;
     min-width: 190px;
+    cursor: pointer;
 
     border-radius: 0 0 10px 10px;
 

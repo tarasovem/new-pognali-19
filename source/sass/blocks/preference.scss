@@ -90,11 +90,7 @@
   }
 
   &:active {
-    color: rgba($gray, 0.3);
-
-    &::before {
-      background-color: rgba($white, 0.3);
-    }
+    opacity: 0.3;
   }
 }
 
@@ -185,6 +181,26 @@ input[type="checkbox"]:checked + .preference__name {
   .preference__block-name {
     font-weight: 500;
     padding-bottom: 13px;
+
+    &:hover,
+    &:active {
+      cursor: pointer;
+      color: rgba(29, 46, 91, 0.6);
+
+      &::after {
+        color: rgba(29, 46, 91, 0.6);
+        background-image: url("../img/icons/dropdown-hover.svg");
+      }
+    }
+
+    &:active {
+      color: rgba(29, 46, 91, 0.3);
+
+      &::after {
+        color: rgba(29, 46, 91, 0.3);
+        background-image: url("../img/icons/dropdown-active.svg");
+      }
+    }
 
     &::after {
       content: "";

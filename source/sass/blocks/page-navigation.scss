@@ -23,22 +23,25 @@
   &::after {
     content: "";
     display: flex;
-    width: 10px;
+    width: 20px;
     height: 20px;
     justify-content: center;
     position: absolute;
-    top: 15px;
+    top: 50%;
     left: 62px;
+    pointer-events: none;
 
-    background: url("../img/icons/mobile/triangle-arrow-right.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    transform: translateY(-50%);
+    border: 10px solid transparent;
+    border-left-color: #192144;
   }
 
   &:first-child {
     &::after {
-      transform: rotate(180deg);
+      border-right-color: #192144;
+      border-left-color: transparent;
+      left: auto;
+      right: 62px;
     }
   }
 }
@@ -54,19 +57,24 @@
   .page-navigation {
     justify-content: flex-end;
     padding-right: 35px;
+    margin-top: 0;
   }
 
   .page-navigation__item {
-    width: 10px;
+    width: 30px;
 
     &::after {
-      top: 0;
-      left: 0;
+      left: 20px;
+    }
+
+    &:first-child {
+      &::after {
+        right: 13px;
+      }
     }
 
     &:last-child {
       border-left: none;
-      margin-left: 33px;
     }
   }
 }
@@ -74,5 +82,17 @@
 @media (min-width: $desktop-breakpoint) {
   .page-navigation {
     padding-right: 45px;
+    margin-top: 0;
+  }
+
+  .page-navigation__item {
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }

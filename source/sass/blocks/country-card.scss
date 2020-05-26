@@ -141,7 +141,6 @@
     min-height: auto;
 
     min-width: 618px;
-    max-height: 140px;
 
     margin-top: 0;
 
@@ -195,6 +194,7 @@
     height: 100%;
     order: 2;
     flex-grow: 1;
+    object-fit: cover;
 
     max-width: 186px;
   }
@@ -206,7 +206,7 @@
     font-size: 24px;
     line-height: 24px;
 
-    padding-top: 29px;
+    padding-top: 30px;
     padding-left: 30px;
 
     &::before {
@@ -221,23 +221,28 @@
     line-height: 18px;
 
     margin-top: 2px;
-    margin-left: 30px;
+    padding-left: 30px;
     padding-bottom: 10px;
+    margin-right: 0;
+    margin-left: 0;
+    padding-right: 240px;
 
     &--number {
       order: 3;
 
       line-height: 30px;
 
-      margin-top: 3px;
-      margin-left: 60px;
+      margin-top: 4px;
+      margin-left: 0;
+      padding-left: 60px;
 
       &::before {
         width: 20px;
         height: 20px;
 
-        bottom: 15px;
-        left: -30px;
+        bottom: auto;
+        left: 30px;
+        top: 5px;
 
         background-size: 20px 20px;
         background-position: center;
@@ -248,8 +253,9 @@
 
 @media (min-width: $desktop-breakpoint) {
   .country-card {
-    padding-bottom: 14px;
-    min-width: 560px;
+    width: 559px;
+    padding-bottom: 0;
+    box-sizing: border-box;
 
     &::before {
       top: 23px;
@@ -258,13 +264,16 @@
   }
 
   .country-card__name {
-    padding-top: 22px;
+    padding-top: 24px;
   }
 
   .country-card__text {
+    padding-left: 31px;
+
     &--number {
-      margin-top: 7px;
-      padding-bottom: 7px;
+      margin-top: 9px;
+      padding-bottom: 0;
+      padding-left: 60px;
 
       &::before {
         bottom: 12px;
